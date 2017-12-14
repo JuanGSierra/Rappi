@@ -1,5 +1,3 @@
-
-
 table.dataTable {
   clear: both;
   margin-top: 1px !important;
@@ -203,7 +201,13 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:fir
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]:last-child {
   padding-right: 0;
 }
+th {
+  font-size: 0.9em;
+}
+td {
+  font-size: 0.85em;
+}
 
 tfoot {
-  padding: 1px; !important;
+  padding-bottom: 1px !important;
 }
