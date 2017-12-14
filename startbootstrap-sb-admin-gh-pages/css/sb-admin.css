@@ -41,7 +41,7 @@ body.fixed-nav {
     font-weight: 800; }
 
 .smaller {
-  font-size: 0.7rem; }
+  font-size: 100rem; }
 
 .o-hidden {
   overflow: hidden !important; }
@@ -93,6 +93,7 @@ body.fixed-nav {
       position: absolute;
       top: 5px;
       left: 21px;
+      /* Tamaño de los circulos de notificaciones en la barra deslizable (mensajes y alertas) */
       font-size: 10px; }
   #mainNav .navbar-collapse .navbar-nav > .nav-item.dropdown.show > .nav-link:after {
     content: '\f107'; }
