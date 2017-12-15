@@ -19,27 +19,35 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card card-register mx-auto mt-5">
-      <div class="card-header">Agregar Empleado</div>
+      <div class="card-header"><i class="fa fa-plus-circle"></i><b>Agregar Empleado</b></div>
       <div class="card-body">
         <form>
           <!-------------------------------------------------------------------------------->
               <div class="form-group">
-                <label>Subir Fotografia</label>
+                <label for="fotografia">Subir Fotografia</label>
                 <div class="input-group">
                   <span class="input-group-btn">
                     <span class="btn btn-default btn-file">
-                      Search… <input type="file" id="imgInp">
+                      Search… <input type="file" id="fotografia">
                     </span>
                   </span>
                   <input type="text" class="form-control" readonly>
                 </div>
-                <img id='img-upload'/>
+                <img id='fotografiaCargada'/>
               </div>
           <!-------------------------------------------------------------------------------->
 
           <div class="form-group">
-            <label for="nombres">Nombres</label>
-            <input class="form-control" id="nombres" type="text" aria-describedby="nameHelp" placeholder="Ingresa nombres">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="primerNombre">Primer Nombre</label>
+                <input class="form-control" id="primerNombre" type="text" aria-describedby="nameHelp" placeholder="Primer Nombre">
+              </div>
+              <div class="col-md-6">
+                <label for="segundoNombre">Segundo Nombre</label>
+                <input class="form-control" id="segundoNombre" type="text" aria-describedby="nameHelp" placeholder="Segundo Nombre">
+              </div>
+            </div>
           </div>
 
           <!-------------------------------------------------------------------------------->
@@ -59,7 +67,7 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="correo">CorreoRappi</label>
+                <label for="correo">Correo Rappi</label>
                 <input class="form-control" id="correo" type="email" aria-describedby="emailHelp" placeholder="Ingresa correo">
               </div>
               <div class="col-md-6">
@@ -95,18 +103,11 @@
             </div>
           </div>
           <!-------------------------------------------------------------------------------->
-          <div class="form-group">
-            <label for="salarioBase">Salario Base</label>
-            <input class="form-control" id="salarioBase" type="number" placeholder="Salario Base">
-          </div>
-          <a class="btn btn-primary btn-block" href="login.html">Register</a>
+          <a class="btn btn-primary btn-block" href="login.html">Inscribir</a>
         </form>
         <!-------------------------------------------------------------------------------->
         <!-------------------------------------------------------------------------------->
-        <div class="text-center">
-          <a class="d-block small mt-3" href="login.html">Login Page</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-        </div>
+
       </div>
     </div>
   </div>

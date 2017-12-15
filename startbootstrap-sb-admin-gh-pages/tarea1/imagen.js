@@ -22,14 +22,14 @@ $(document).ready( function() {
 		        var reader = new FileReader();
 
 		        reader.onload = function (e) {
-		            $('#img-upload').attr('src', e.target.result);
+		            $('#fotografiaCargada').attr('src', e.target.result);
 		        }
 
 		        reader.readAsDataURL(input.files[0]);
 		    }
 		}
 
-		$("#imgInp").change(function(){
+		$("#fotografia").change(function(){
 		    readURL(this);
 		});
 	});

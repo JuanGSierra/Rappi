@@ -24,8 +24,9 @@
      display: block;
  }
 
- #img-upload{
-     width: 350px;
+ #fotografiaCargada{
+     align: middle;
+     width: 300px;
      height: 350px;
  }
 html {
