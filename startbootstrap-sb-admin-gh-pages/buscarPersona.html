@@ -80,10 +80,40 @@
   </nav>
   <div class="content-wrapper">
     <div class="container-fluid">
-
-      <h1>Buscar Empleado</h1>
-      <hr>
-      <div style="height: 1000px;"></div>
+      <div class="card">
+        <div class = "card-header">Buscar Empleado</div>
+          <div class = "card-body">
+            <form>
+              <table class="table" id="tablaBuscarEmpleado" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Por Correo</th>
+                    <th>Por Nombre</th>
+                    <th>Por Cedula</th>
+                    <th>Por Celular</th>
+                    <th>Por Pedido</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <th><a class="btn btn-primary" href="index.html">Buscar</a></th>
+                  <th><a class="btn btn-primary" href="index.html">Buscar</a></th>
+                  <th><a class="btn btn-primary" href="index.html">Buscar</a></th>
+                  <th><a class="btn btn-primary" href="index.html">Buscar</a></th>
+                  <th><a class="btn btn-primary" href="index.html">Buscar</a></th>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td><input type="email" id="buscarPorCorreo"></td>
+                    <td><input type="text" id="buscarPorNombre"></td>
+                    <td><input type="number" id="buscarPorCedula"></td>
+                    <td><input type="number" id="buscarPorCelular"></td>
+                    <td><input type="text" id="buscarPorPedido"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+      </div>
     </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
@@ -117,30 +147,15 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <!-- Toggle between fixed and static navbar-->
-    <script>
-    $('#toggleNavPosition').click(function() {
-      $('body').toggleClass('fixed-nav');
-      $('nav').toggleClass('fixed-top static-top');
-    });
-
-    </script>
-    <!-- Toggle between dark and light navbar-->
-    <script>
-    $('#toggleNavColor').click(function() {
-      $('nav').toggleClass('navbar-dark navbar-light');
-      $('nav').toggleClass('bg-dark bg-light');
-      $('body').toggleClass('bg-dark bg-light');
-    });
-
-    </script>
+    <!------------------------------------------------------------->
+    <script src="tarea1/imagen.js"></script>
   </div>
 </body>
 
