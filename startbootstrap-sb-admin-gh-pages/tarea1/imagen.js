@@ -1,23 +1,4 @@
 $(document).ready( function() {
-
-  // Disable scroll when focused on a number input.
-   $('form').on('focus', 'input[type=number]', function(e) {
-       $(this).on('wheel', function(e) {
-           e.preventDefault();
-       });
-   });
-
-   // Restore scroll on number inputs.
-   $('form').on('blur', 'input[type=number]', function(e) {
-       $(this).off('wheel');
-   });
-
-   // Disable up and down keys.
-   $('form').on('keydown', 'input[type=number]', function(e) {
-       if ( e.which == 38 || e.which == 40 )
-           e.preventDefault();
-   });
-
     	$(document).on('change', '.btn-file :file', function() {
 		var input = $(this),
 			label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
@@ -41,14 +22,14 @@ $(document).ready( function() {
 		        var reader = new FileReader();
 
 		        reader.onload = function (e) {
-		            $('#fotografiaCargada').attr('src', e.target.result);
+		            $('#img-upload').attr('src', e.target.result);
 		        }
 
 		        reader.readAsDataURL(input.files[0]);
 		    }
 		}
 
-		$("#fotografia").change(function(){
+		$("#imgInp").change(function(){
 		    readURL(this);
 		});
 	});
