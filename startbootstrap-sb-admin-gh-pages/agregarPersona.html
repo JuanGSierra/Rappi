@@ -77,20 +77,20 @@
       </ul>
     </div>
   </nav>
-  <div class="content-wrapper">
 
+  <div class="content-wrapper">
   <div class="container-fluid">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header"><i class="fa fa-plus-circle"></i><b>Agregar Empleado</b></div>
       <div class="card-body">
-        <form>
+        <form action="prueba.php" method="post">
           <!-------------------------------------------------------------------------------->
               <div class="form-group">
                 <label for="fotografia">Subir Fotografia</label>
                 <div class="input-group">
                   <span class="input-group-btn">
                     <span class="btn btn-default btn-file">
-                      Search… <input type="file" id="fotografia">
+                      Search… <input type="file" name="fotografia" id="fotografia">
                     </span>
                   </span>
                   <input type="text" class="form-control" readonly>
@@ -103,11 +103,11 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="primerNombre">Primer Nombre</label>
-                <input class="form-control" id="primerNombre" type="text" aria-describedby="nameHelp" placeholder="Primer Nombre">
+                <input class="form-control" name="primerNombre" id="primerNombre" type="text" aria-describedby="nameHelp" placeholder="Primer Nombre">
               </div>
               <div class="col-md-6">
                 <label for="segundoNombre">Segundo Nombre</label>
-                <input class="form-control" id="segundoNombre" type="text" aria-describedby="nameHelp" placeholder="Segundo Nombre">
+                <input class="form-control" name="segundoNombre" id="segundoNombre" type="text" aria-describedby="nameHelp" placeholder="Segundo Nombre">
               </div>
             </div>
           </div>
@@ -117,11 +117,11 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="primerApellido">Primer Apellido</label>
-                <input class="form-control" id="primerApellido" type="text" aria-describedby="nameHelp" placeholder="Ingreso primer apellido">
+                <input class="form-control" name="primerApellido"id="primerApellido" type="text" aria-describedby="nameHelp" placeholder="Ingreso primer apellido">
               </div>
               <div class="col-md-6">
                 <label for="segundoApellido">Segundo Apellido</label>
-                <input class="form-control" id="segundoApellido" type="text" aria-describedby="nameHelp" placeholder="Ingreso segundo apellido">
+                <input class="form-control" name="segundoApellido" id="segundoApellido" type="text" aria-describedby="nameHelp" placeholder="Ingreso segundo apellido">
               </div>
             </div>
           </div>
@@ -130,11 +130,11 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="correo">Correo Rappi</label>
-                <input class="form-control" id="correo" type="email" aria-describedby="emailHelp" placeholder="Ingresa correo">
+                <input class="form-control" name="correo" id="correo" type="email" aria-describedby="emailHelp" placeholder="Ingresa correo">
               </div>
               <div class="col-md-6">
                 <label for="correo">Celular</label>
-                <input class="form-control" id="celular" type="number" aria-describedby="celularHelp" placeholder="Ingresa Celular">
+                <input class="form-control" name="celular" id="celular" type="number" aria-describedby="celularHelp" placeholder="Ingresa Celular">
               </div>
             </div>
           </div>
@@ -143,11 +143,11 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="cedula">Cedula</label>
-                <input class="form-control" id="cedula" type="number" placeholder="Ingresa Cedula">
+                <input class="form-control" name="cedula" id="cedula" type="number" placeholder="Ingresa Cedula">
               </div>
               <div class="col-md-6">
                 <label for="correoPersonal">Correo Personal</label>
-                <input class="form-control" id="correoPersonal" type="email" placeholder="Ingresa Correo Personal">
+                <input class="form-control" name="correoPersonal" id="correoPersonal" type="email" placeholder="Ingresa Correo Personal">
               </div>
             </div>
           </div>
@@ -156,17 +156,18 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                <input class="form-control" id="fechaNacimiento" type="date" placeholder="Ingresa fecha de nacimiento">
+                <input class="form-control" name="fechaNacimiento" id="fechaNacimiento" type="date" placeholder="Ingresa fecha de nacimiento">
               </div>
               <div class="col-md-6">
                 <label for="fechaIngreso">Fecha de Ingreso</label>
-                <input class="form-control" id="fechaIngreso" type="date" placeholder="Ingresa fecha de ingreso">
+                <input class="form-control" name="fechaIngreso" id="fechaIngreso" type="date" placeholder="Ingresa fecha de ingreso">
               </div>
             </div>
           </div>
           <!-------------------------------------------------------------------------------->
           <a class="btn btn-primary btn-block" href="login.html">Inscribir</a>
         </form>
+
         <!-------------------------------------------------------------------------------->
         <!-------------------------------------------------------------------------------->
 
