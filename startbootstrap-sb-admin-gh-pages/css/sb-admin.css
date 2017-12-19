@@ -13,7 +13,7 @@
  .btn-file {
      position: center;
      overflow: hidden;
-     background-color: #e9e9e9;
+     background-color: #f24d4f;
  }
  .btn-file input[type=file] {
      position: absolute;
@@ -375,6 +375,10 @@ body.sidenav-toggled .navbar-sidenav-tooltip.show {
 
 .card-register {
   max-width: 40rem; }
+
+.card-search {
+  max-width: 20rem; }
+
 
 footer.sticky-footer {
   position: absolute;
