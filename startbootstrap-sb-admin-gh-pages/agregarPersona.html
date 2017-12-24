@@ -79,35 +79,41 @@
   </nav>
 
   <div class="content-wrapper">
+
+<!--- formulario --->
   <div class="container-fluid">
     <div class="card card-register mx-auto mt-5">
       <div class="card-header"><i class="fa fa-plus-circle"></i><b>Agregar Empleado</b></div>
       <div class="card-body">
-        <form action="prueba.php" method="post">
-          <!-------------------------------------------------------------------------------->
+        <form action="conexion_prueba.php" method="post">
+          <!--- La subida de la foto se va a dejar comentada hasta que se solucione el hosting
               <div class="form-group">
                 <label for="fotografia">Subir Fotografia</label>
                 <div class="input-group">
                   <span class="input-group-btn">
                     <span class="btn btn-default btn-file">
-                      Browse.. <input type="file" name="fotografia" id="fotografia">
+                      Tomar o buscar foto... <input type="file" name="fotografia" id="fotografia">
                     </span>
                   </span>
                   <input type="text" class="form-control" readonly>
                 </div>
                 <img id='fotografiaCargada'/>
               </div>
+              --->
           <!-------------------------------------------------------------------------------->
 
           <div class="form-group">
+            Recuerda respetar las mayúsculas en los nombres, una vez cargados los datos <b>no podrán ser modificados</b>, todos los campos son obligatorios.
             <div class="form-row">
               <div class="col-md-6">
-                <label for="primerNombre">Primer Nombre</label>
-                <input class="form-control" name="primerNombre" id="primerNombre" type="text" aria-describedby="nameHelp" placeholder="Primer Nombre">
+                <div class="dropdown-divider"></div>
+                <label for="primerNombre">Primer nombre</label>
+                <input class="form-control" name="nombre1" id="nombre1" type="text" aria-describedby="nameHelp" placeholder="primer nombre">
               </div>
               <div class="col-md-6">
-                <label for="segundoNombre">Segundo Nombre</label>
-                <input class="form-control" name="segundoNombre" id="segundoNombre" type="text" aria-describedby="nameHelp" placeholder="Segundo Nombre">
+                <div class="dropdown-divider"></div>
+                <label for="segundoNombre">Segundo nombre</label>
+                <input class="form-control" name="nombre2" id="nombre2" type="text" aria-describedby="nameHelp" placeholder="segundo nombre">
               </div>
             </div>
           </div>
@@ -116,12 +122,12 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="primerApellido">Primer Apellido</label>
-                <input class="form-control" name="primerApellido"id="primerApellido" type="text" aria-describedby="nameHelp" placeholder="Ingreso primer apellido">
+                <label for="primerApellido">Primer apellido</label>
+                <input class="form-control" name="apellido1"id="apellido1" type="text" aria-describedby="nameHelp" placeholder="primer apellido">
               </div>
               <div class="col-md-6">
                 <label for="segundoApellido">Segundo Apellido</label>
-                <input class="form-control" name="segundoApellido" id="segundoApellido" type="text" aria-describedby="nameHelp" placeholder="Ingreso segundo apellido">
+                <input class="form-control" name="apellido2" id="apellido2" type="text" aria-describedby="nameHelp" placeholder="segundo apellido">
               </div>
             </div>
           </div>
@@ -130,24 +136,39 @@
             <div class="form-row">
               <div class="col-md-6">
                 <label for="correo">Correo Rappi</label>
-                <input class="form-control" name="correo" id="correo" type="email" aria-describedby="emailHelp" placeholder="Ingresa correo">
-              </div>
-              <div class="col-md-6">
-                <label for="correo">Celular</label>
-                <input class="form-control" name="celular" id="celular" type="number" aria-describedby="celularHelp" placeholder="Ingresa Celular">
-              </div>
-            </div>
-          </div>
-          <!-------------------------------------------------------------------------------->
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="cedula">Cedula</label>
-                <input class="form-control" name="cedula" id="cedula" type="number" placeholder="Ingresa Cedula">
+                <input class="form-control" name="email_rappi" id="correo" type="email_rappi" aria-describedby="emailHelp" placeholder="correo de Rappi">
               </div>
               <div class="col-md-6">
                 <label for="correoPersonal">Correo Personal</label>
-                <input class="form-control" name="correoPersonal" id="correoPersonal" type="email" placeholder="Ingresa Correo Personal">
+                <input class="form-control" name="email_personal" id="email_personal" type="email" placeholder="correo personal">
+              </div>
+            </div>
+          </div>
+
+          <!-------------------------------------------------------------------------------->
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="cedula">Cédula</label>
+                <input class="form-control" name="cedula" id="cedula" type="number" placeholder="cédula">
+              </div>
+              <div class="col-md-6">
+                <label for="correo">Número celular</label>
+                <input class="form-control" name="celular" id="celular" type="number" aria-describedby="celularHelp" placeholder="numero de contacto">
+              </div>
+            </div>
+          </div>
+
+          <!-------------------------------------------------------------------------------->
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="fechaNacimiento">Fecha de nacimiento</label>
+                <input class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" type="date" placeholder="Ingresa fecha de nacimiento">
+              </div>
+              <div class="col-md-6">
+                <label for="fechaIngreso">Fecha de ingreso</label>
+                <input class="form-control" name="fecha_ingreso" id="fecha_ingreso" type="date" placeholder="Ingresa fecha de ingreso">
               </div>
             </div>
           </div>
@@ -155,17 +176,18 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                <input class="form-control" name="fechaNacimiento" id="fechaNacimiento" type="date" placeholder="Ingresa fecha de nacimiento">
+                <label for="fechaNacimiento">Rol</label>
+                <input class="form-control" name="rol" id="rol" type="number" placeholder="rol inicial">
               </div>
               <div class="col-md-6">
-                <label for="fechaIngreso">Fecha de Ingreso</label>
-                <input class="form-control" name="fechaIngreso" id="fechaIngreso" type="date" placeholder="Ingresa fecha de ingreso">
+                <label for="fechaIngreso">Remoto (verdadero o falso)</label>
+                <input class="form-control" name="remoto" id="remoto" type="text" placeholder="¿Es remoto?">
               </div>
             </div>
           </div>
           <!-------------------------------------------------------------------------------->
-          <a class="btn btn-primary btn-block" href="login.html">Inscribir</a>
+           <input type="submit" value="Registrar"></input>
+          <!---<a class="btn btn-primary btn-block" href="login.html">Inscribir</a>------>
         </form>
 
         <!-------------------------------------------------------------------------------->
