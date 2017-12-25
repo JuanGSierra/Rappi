@@ -1,7 +1,7 @@
 <?php
 
 // concexion de la base de datos y el servidor
-$link = mysql_connect ("Localhost","edurappi_juancho","Rappi123") or die ("<h2> Nombre de usuario o contraseña incorrectos</h2>");
+$link = mysql_connect ("localhost","edurappi_juancho","Rappi123") or die ("<h2> Nombre de usuario o contraseña incorrectos</h2>");
 $db mysql_select_db("edurappi_juandavid",$link) or die ("<h2> No es posible conectar con base de datos</h2>");
 
 // obtener los valores del formulario
