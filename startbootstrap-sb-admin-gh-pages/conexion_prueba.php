@@ -17,16 +17,16 @@ $celular = $post('celular');
 $fecha_nacimiento = $post('fecha_nacimiento');
 $fecha_ingreso = $post('fecha_ingreso');
 $rol = $post('rol');
-$remoto = $post('remoto');
+$lider = $post('remoto');
 
 
 // Se confirman los datos ingresados por medio de un método length
 
-$req = (strlen($nombre1)*strlen($nombre2)*strlen($apellido1)*strlen($apellido2)*strlen($email_rappi)*strlen($email_personal)*strlen($cedula)*strlen($celular)*strlen($fecha_nacimiento)*strlen($fecha_ingreso)*strlen($rol)*strlen($remoto)) or die("Formulario incompleto");
+$req = (strlen($nombre1)*strlen($nombre2)*strlen($apellido1)*strlen($apellido2)*strlen($email_rappi)*strlen($email_personal)*strlen($cedula)*strlen($celular)*strlen($fecha_nacimiento)*strlen($fecha_ingreso)*strlen($rol)) or die("Formulario incompleto");
 
 // ingreso de los datos pro medio de sqlsrv_begin_transaction
 
-mysql_query("INSERT INTO prueba_php_2 VALUES('','$email_rappi','','$nombre1','$nombre2','$apellido1','$apellido2','$celular','$cedula','$fecha_nacimiento','$fecha_ingreso','1','','$email_personal','$rol','0')",$link) OR die ("<h2>Error cargando los datos al servidor</h2>");
+mysql_query("INSERT INTO prueba_php_2 VALUES('','$email_rappi','','$nombre1','$nombre2','$apellido1','$apellido2','$celular','$cedula','$fecha_nacimiento','$fecha_ingreso','1','','$email_personal','$rol','0','$lider')",$link) OR die ("<h2>Error cargando los datos al servidor</h2>");
 
 
 ?>

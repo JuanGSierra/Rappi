@@ -43,15 +43,11 @@
               <a href="buscarPersona.html">Buscar Persona</a>
             </li>
             <li>
-              <a href="consultarEquipo.html">Consultar Equipo</a>
-            </li>
-            <li>
               <a href="personasActivas.html">Personas Activas</a>
             </li>
             <li>
-              <a href="consultarHorario.html">Consultar Horario</a>
+              <a href="personasInactivas.html">Personas Inactivas</a>
             </li>
-
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
@@ -65,12 +61,6 @@
             </li>
             <li>
               <a href="despedirPersona.html">Despedir Persona</a>
-            </li>
-            <li>
-              <a href="modificarDatos.html">Modificar Datos</a>
-            </li>
-            <li>
-              <a href="personasInactivas.html">Personas Inactivas</a>
             </li>
           </ul>
         </li>
@@ -98,8 +88,59 @@
 
   <div class="content-wrapper">
     <div class="container-fluid">
+        <div class="card card-register mx-auto mt-5">
+          <div class="card-header"><i class="fa fa-plus-circle"></i><b>Modificar datos</b></div>
+          <div class="card-body">
+            <form action="conexion_prueba.php" method="post">
+              <div class="form-group">
+                Ingresa el <b>correo</b>y la <b>información a modificar</b>, verifica los datoa antes de presionar modificar.
+                <div class="form-row">
+                  <div class="col-md-6">
+                    <div class="dropdown-divider"></div>
+                    <label for="correo">Correo Rappi</label>
+                    <input class="form-control" name="email_rappi" id="correo" type="email_rappi" aria-describedby="emailHelp" placeholder="correo de Rappi">
+                  </div>
+                  <div class="col-md-6">
+                    <div class="dropdown-divider"></div>
+                    <label for="campo">Información a modificar</label>
+                    <div class="form-group">
+                      <select class="form-control" name="campo" id="campo" placeholder="selecciona que vas a modificar">
+                        <option>Turno</option>
+                        <option>Rol</option>
+                        <option>Lider</option>
+                        <option>Celular</option>
+                        <option>Remoto</option>
+                        <option>País</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    </div>
+              <!-------------------------------------------------------------------------------->
+              <div class="form-group">
+                <div class="form-row">
+                  <div class="col-md-6">
+                    <label for="nuevo">Nueva información</label>
+                    <input class="form-control" name="nuevo"id="nuevo" type="text" aria-describedby="nameHelp" placeholder="nueva información">
+                  </div>
+                </div>
+              </div>
+
+              <!-------------------------------------------------------------------------------->
+
+              <button type="submit" class="btn btn-primary">Modificar</button>
+              <!---<a class="btn btn-primary btn-block" href="login.html">Inscribir</a>------>
+            </form>
+
+            <!-------------------------------------------------------------------------------->
+            <!-------------------------------------------------------------------------------->
+
+
+
+          </div>
+        </div>
+      </div>
   </div>
 
     <!-- /.container-fluid-->
