@@ -77,7 +77,7 @@
             </li>
           </ul>
         </li>
-        
+
       </ul>
 
       <!-- Reductor de la barra deslizante -->
@@ -102,6 +102,27 @@
 
   <div class="content-wrapper">
     <div class="container-fluid">
+
+      <script>
+      function myFunction() {
+        var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 7; i++){
+    text += possible.charAt(Math.floor(Math.random() * possible.length));}
+    document.getElementById("demo").innerHTML = text;
+  }
+
+</script>
+</head>
+
+
+
+<h2>Generador de codigo aleatorio</h2>
+
+<p id="demo">vacío</p>
+
+<button type="button" onclick="myFunction()">Generar</button>
 
     </div>
   </div>
