@@ -14,6 +14,30 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <!-- Validación de datos por medio de  JavaScript-->
+  <script>
+  function validateForm() {
+    // Declaración de variables que leen el formulario
+      var dato1 = document.forms["sandbox"]["dato1"].value;
+      var dato2 = document.forms["sandbox"]["dato2"].value;
+      var dato3 = document.forms["sandbox"]["dato3"].value;
+      var dato4 = document.forms["sandbox"]["dato4"].value;
+      if (dato1 == "") {
+          alert("Dato 1 no debe estar vacío");
+          return false;
+      }else if (dato2 == "") {
+          alert("Dato 2 no debe estar vacío");
+          return false;
+      }else if (dato3 == "") {
+          alert("Dato 3 no debe estar vacío");
+          return false;
+      }else if (dato4 == "") {
+          alert("Dato 4 no debe estar vacío");
+          return false;
+      }
+  }
+</script>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -85,34 +109,19 @@
     <div class="card card-register mx-auto mt-2">
       <div class="card-header"><i class="fa fa-plus-circle"></i><b>Agregar Empleado</b></div>
       <div class="card-body">
-        <form action="php/php_sandbox.php" method="post">
-          <!--- La subida de la foto se va a dejar comentada hasta que se solucione el hosting
-              <div class="form-group">
-                <label for="fotografia">Subir Fotografia</label>
-                <div class="input-group">
-                  <span class="input-group-btn">
-                    <span class="btn btn-default btn-file">
-                      Tomar o buscar foto... <input type="file" name="fotografia" id="fotografia">
-                    </span>
-                  </span>
-                  <input type="text" class="form-control" readonly>
-                </div>
-                <img id='fotografiaCargada'/>
-              </div>
-              --->
-          <!-------------------------------------------------------------------------------->
-
+        <form action="php/php_sandbox.php" method="post" name = "sandbox" onsubmit="return validateForm()">
           <div class="form-group">
             Hola Juan, bienvenido al Sandbox de PHP.
             <div class="form-row">
               <div class="col-md-6">
                 <div class="dropdown-divider"></div>
-                <label for="primerNombre">Dato 1</label>
-                <input class="form-control" name="dato1" id="dato1" type="text" aria-describedby="nameHelp" placeholder="dato1">
+                <label for="primerNombre">Dato 1 (número)</label>
+                <input class="form-control" name="dato1" id="dato1" type="number" aria-describedby="nameHelp" placeholder="dato1">
+                <span class="error"> <?php echo $nameErr;?></span>
               </div>
               <div class="col-md-6">
                 <div class="dropdown-divider"></div>
-                <label for="segundoNombre">Dato 2</label>
+                <label for="segundoNombre">Dato 2 (texto)</label>
                 <input class="form-control" name="dato2" id="dato2" type="text" aria-describedby="nameHelp" placeholder="dato2">
               </div>
             </div>
@@ -121,13 +130,13 @@
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
-                <label for="fechaNacimiento">Dato 3</label>
+                <label for="fechaNacimiento">Dato 3 (fecha)</label>
                 <input class="form-control" name="dato3" id="dato3" type="date" placeholder="fecha4">
               </div>
               <div class="col-md-6">
                 <label for="rol">Dato 4</label>
                 <div class="form-group">
-                  <select class="form-control" name="dato4" id="dato4" placeholder="selecciona el rol">
+                  <select class="form-control" name="dato4" id="dato4" type="text" placeholder="selecciona el rol">
                     <option>1 A </option>
                     <option>2 B</option>
                     <option>3 C</option>
@@ -137,13 +146,12 @@
 
 
 
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button name = "enviar" type="submit" class="btn btn-primary">Enviar</button>
           <!---<a class="btn btn-primary btn-block" href="login.html">Inscribir</a>------>
         </form>
 
         <!-------------------------------------------------------------------------------->
         <!-------------------------------------------------------------------------------->
-
 
 
       </div>
