@@ -14,6 +14,88 @@
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
+  <!-- Validación de datos por medio de  JavaScript-->
+  <script>
+  function validateForm() {
+    // Declaración de variables que leen el formulario
+      var nombre1 = document.forms["sandbox"]["nombre1"].value;
+      var dato2 = document.forms["sandbox"]["nombre2"].value;
+      var apellido1 = document.forms["sandbox"]["apellido1"].value;
+      var apellido2 = document.forms["sandbox"]["apellido2"].value;
+      var email_rappi= document.forms["sandbox"]["email_rappi"].value;
+      var email_personal= document.forms["sandbox"]["email_personal"].value;
+      var cedula= document.forms["sandbox"]["cedula"].value;
+      var celular = document.forms["sandbox"]["celular"].value;
+      var fecha_nacimiento= document.forms["sandbox"]["fecha_nacimiento"].value;
+      var fecha_ingreso= document.forms["sandbox"]["fecha_ingreso"].value;
+      var turno = document.forms["sandbox"]["turno"].value;
+      var rol = document.forms["sandbox"]["rol"].value;
+      var dia_d = document.forms["sandbox"]["dia_d"].value;
+      var dia_d_alt = document.forms["sandbox"]["dia_d_alt"].value;
+      var lider = document.forms["sandbox"]["lider"].value;
+      var grupo = document.forms["sandbox"]["grupo"].value;
+      var pais = document.forms["sandbox"]["pais"].value;
+      var modalidad = document.forms["sandbox"]["modalidad"].value;
+
+
+
+
+      if (nombre1 == "") {
+          alert("Debes ingresar el nombre de la persona");
+          return false;
+      }else if (apellido1 == "") {
+          alert("Debes ingresar el primer apellido de la persona");
+          return false;
+      }else if (apellido2 == "") {
+          alert("Debes ingresar el segundo apellido de la persona");
+          return false;
+      }else if (email_rappi== "") {
+          alert("Debes ingresar el correo de Rappi");
+          return false;
+      }else if (email_personal== "") {
+          alert("Debes ingresar un correo personal");
+          return false;
+      }else if (cedula== "") {
+          alert("Debes ingresar la cedula de la persona");
+          return false;
+      }else if (celular== "") {
+          alert("Debes ingresar un numero celular de la persona");
+          return false;
+      }else if (fecha_nacimiento== "") {
+          alert("Debes ingresar la fecha de nacimiento de la persona");
+          return false;
+      }else if (fecha_ingreso== "") {
+          alert("Debes digitar la fecha de ingreso de la persona");
+          return false;
+      }else if (turno == "") {
+          alert("Debes ingresar el turno al cual pertenece la persona");
+          return false;
+      }else if (rol == "") {
+          alert("Debes ingresar el rol de la persona");
+          return false;
+      }else if (dia_d == "") {
+          alert("Debes ingresar el dia de descanso de la persona");
+          return false;
+      }else if (dia_d_alt == "") {
+          alert("Debes ingresar el dia de descanso alternativo de la persona");
+              return false;
+      }else if ( lider == "") {
+          alert("Debes ingresar el grupo al cual pertenece la persona");
+          return false;
+      }else if (grupo== "") {
+          alert("Debes ingresar el lider de la persona");
+                return false;
+      }else if (pais == "") {
+          alert("Debes ingresar el pais en el que trabajara la persona");
+          return false;
+      }else if (modalidad == "") {
+          alert("Debes ingresar la modalidad de la persona");
+          return false;
+      }
+
+  }
+</script>
+
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -85,23 +167,7 @@
     <div class="card card-register mx-auto mt-2">
       <div class="card-header"><i class="fa fa-plus-circle"></i><b>Agregar Empleado</b></div>
       <div class="card-body">
-        <form action="php/conexion_prueba.php" method="post">
-          <!--- La subida de la foto se va a dejar comentada hasta que se solucione el hosting
-              <div class="form-group">
-                <label for="fotografia">Subir Fotografia</label>
-                <div class="input-group">
-                  <span class="input-group-btn">
-                    <span class="btn btn-default btn-file">
-                      Tomar o buscar foto... <input type="file" name="fotografia" id="fotografia">
-                    </span>
-                  </span>
-                  <input type="text" class="form-control" readonly>
-                </div>
-                <img id='fotografiaCargada'/>
-              </div>
-              --->
-          <!-------------------------------------------------------------------------------->
-
+        <form action="php/agregarPersona.php" method="post" name = "sandbox" onsubmit="return validateForm()">
           <div class="form-group">
             Recuerda respetar las mayúsculas en los nombres, una vez cargados los datos <b>no podrán ser modificados</b>, todos los campos son obligatorios.
             <div class="form-row">
@@ -118,8 +184,7 @@
             </div>
           </div>
 
-          <!-------------------------------------------------------------------------------->
-          <div class="form-group">
+            <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
                 <label for="primerApellido">Primer apellido</label>
@@ -131,7 +196,7 @@
               </div>
             </div>
           </div>
-          <!-------------------------------------------------------------------------------->
+
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -145,7 +210,6 @@
             </div>
           </div>
 
-          <!-------------------------------------------------------------------------------->
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -159,7 +223,6 @@
             </div>
           </div>
 
-          <!-------------------------------------------------------------------------------->
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -172,13 +235,97 @@
               </div>
             </div>
           </div>
-          <!-------------------------------------------------------------------------------->
           <div class="form-group">
             <div class="form-row">
+              <div class="col-md-6">
+                <label for="turno">Turno</label>
+                <div class="form-group">
+                  <select class="form-control" name="turno" id="turno" placeholder="selecciona el rol">
+                    <option></option>
+                    <option>TURNO 11 S</option>
+                    <option>TURNO 12 S</option>
+                    <option>TURNO 14 S</option>
+                    <option>TURNO 13 S</option>
+                    <option>TURNO 15 S</option>
+                    <option>TURNO 17 S</option>
+                    <option>TURNO 19 S</option>
+                    <option>TURNO 20 S</option>
+                    <option>TURNO 5 A</option>
+                    <option>TURNO 6 S</option>
+                    <option>TURNO 9 S</option>
+                    <option>TURNO 1 A</option>
+                    <option>TURNO 10 A</option>
+                    <option>TURNO 18 A</option>
+                    <option>TURNO 19 A</option>
+                    <option>TURNO 2 A</option>
+                    <option>TURNO 20 A</option>
+                    <option>TURNO 3 A</option>
+                    <option>TURNO 4 A</option>
+                    <option>TURNO 7 A</option>
+                    <option>TURNO 8 A</option>
+                    <option>Turno 1</option>
+                    <option>Turno 2</option>
+                    <option>Turno 3</option>
+                    <option>Turno 4</option>
+                    <option>Turno 5</option>
+                    <option>Turno 6</option>
+                    <option>Turno 7</option>
+                    <option>Turno 14</option>
+                    <option>Turno 8</option>
+                    <option>Turno 9</option>
+                    <option>Turno 13</option>
+                    <option>Turno 10</option>
+                    <option>Turno 12</option>
+                    <option>Turno 11</option>
+                    <option>Turno 15</option>
+                    <option>Turno 16</option>
+                    <option>Turno 20</option>
+                    <option>Turno 21</option>
+                    <option>Turno 22</option>
+                    <option>Turno 23</option>
+                    <option>Turno 24</option>
+                    <option>Turno 25</option>
+                    <option>Turno 26</option>
+                    <option>Turno 27</option>
+                    <option>Turno 28</option>
+                    <option>Turno 29</option>
+                    <option>Turno 30</option>
+                    <option>Turno 31</option>
+                    <option>Turno 32</option>
+                    <option>Turno 33</option>
+                    <option>Turno 34</option>
+                    <option>Turno 35</option>
+                    <option>Turno 36</option>
+                    <option>Turno 37</option>
+                    <option>Turno 38</option>
+                    <option>Turno 39</option>
+                    <option>Turno 40</option>
+                    <option>Turno 41</option>
+                    <option>Turno 42</option>
+                    <option>Turno 43</option>
+                    <option>Turno 44</option>
+                    <option>Turno 45</option>
+                    <option>Turno 46</option>
+                    <option>Turno 47</option>
+                    <option>Turno 48</option>
+                    <option>Turno 49</option>
+                    <option>Turno 1 M</option>
+                    <option>Turno 2 M</option>
+                    <option>Turno 3 M</option>
+                    <option>Turno 4 M</option>
+                    <option>Turno 5 M</option>
+                    <option>Turno 50</option>
+                    <option>Turno 51</option>
+                    <option>Turno 52</option>
+                    <option>Turno 53</option>
+                  </select>
+                </div>
+              </div>
               <div class="col-md-6">
                 <label for="rol">Rol</label>
                 <div class="form-group">
                   <select class="form-control" name="rol" id="rol" placeholder="selecciona el rol">
+                    <option></option>
                     <option>Lider Global</option>
                     <option>Lider</option>
                     <option>Experto</option>
@@ -201,17 +348,56 @@
                     <option>Tecnologia</option>
                     <option>Power User</option>
                     <option>Auxiliar de contratacion</option>
+                    <option>Administrador Rappi Feed</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="fechaNacimiento">Día de descanso</label>
+                <div class="form-group">
+                  <select class="form-control" name="dia_d" id="dia_d" placeholder="selecciona el lider">
+                    <option></option>
+                    <option>Lunes</option>
+                    <option>Martes</option>
+                    <option>Miercoles</option>
+                    <option>Jueves</option>
+                    <option>Viernes</option>
+                    <option>Sabado</option>
+                    <option>Domingo</option>
                   </select>
                 </div>
               </div>
               <div class="col-md-6">
+                <label for="fechaNacimiento">Día de descanso alternativo</label>
+                <div class="form-group">
+                  <select class="form-control" name="dia_d_alt" id="dia_d_alt" placeholder="selecciona el lider">
+                    <option></option>
+                    <option>Lunes</option>
+                    <option>Martes</option>
+                    <option>Miercoles</option>
+                    <option>Jueves</option>
+                    <option>Viernes</option>
+                    <option>Sabado</option>
+                    <option>Domingo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
                 <label for="fechaNacimiento">Lider</label>
                 <div class="form-group">
                   <select class="form-control" name="lider" id="lider" placeholder="selecciona el lider">
+                    <option></option>
                     <option>Rafael Franco</option>
                     <option>Tatan</option>
                     <option>July</option>
-                    <option>Cesar</option>
                     <option>Madison</option>
                     <option>Alberto</option>
                     <option>Andres</option>
@@ -229,22 +415,71 @@
                     <option>Enrique</option>
                     <option>Luisa</option>
                     <option>Entrenadores</option>
-
                   </select>
                 </div>
               </div>
-
+              <div class="col-md-6">
+                <label for="fechaNacimiento">Grupo</label>
+                <div class="form-group">
+                  <select class="form-control" name="grupo" id="grupo" placeholder="selecciona el lider">
+                    <option></option>
+                    <option>Grupo 1</option>
+                    <option>Grupo 2</option>
+                    <option>Grupo 3</option>
+                    <option>Grupo 4</option>
+                    <option>Grupo 5</option>
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
-          <!-------------------------------------------------------------------------------->
 
-          <button type="submit" class="btn btn-primary">Registrar</button>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="fechaNacimiento">País</label>
+                <div class="form-group">
+                  <select class="form-control" name="pais" id="pais" placeholder="selecciona el lider">
+                    <option></option>
+                    <option>COL</option>
+                    <option>MX - COL</option>
+                    <option>MX - MX</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="correo">Modalidad</label>
+                <select class="form-control" name="modalidad" id="modalidad" placeholder="selecciona el lider">
+                  <option></option>
+                  <option>Presencial</option>
+                  <option>Remoto</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-row">
+              <div class="col-md-6">
+                <label for="cedula">Usuario CMS</label>
+                <input class="form-control" name="cms_user_id" id="cms_user_id" type="number" placeholder="número de usuario CMS">
+              </div>
+              <div class="col-md-6">
+                <label for="segundoNombre">Nick</label>
+                <input class="form-control" name="nick" id="nick" type="text" aria-describedby="nameHelp" placeholder="solo para lideres">
+              </div>
+            </div>
+            </div>
+          </div>
+
+
+
+
+          <button name = "enviar" type="submit" class="btn btn-primary">Enviar</button>
           <!---<a class="btn btn-primary btn-block" href="login.html">Inscribir</a>------>
         </form>
 
         <!-------------------------------------------------------------------------------->
         <!-------------------------------------------------------------------------------->
-
 
 
       </div>
