@@ -87,42 +87,44 @@
   </nav>
 
   <div class="content-wrapper">
-    <div class="container-fluid">
-        <div class=" mx-auto mt-2">
-          <div class="card-header"><i class="fa fa-plus-circle"></i><b>Modificar datos</b></div>
+    <!--- formulario --->
+      <div class="container-fluid">
+        <div class="card card-register mx-auto mt-2">
+          <div class="card-header"><i class="fa fa-plus-circle"></i><b>Agregar Empleado</b></div>
           <div class="card-body">
-            <form action="conexion_prueba.php" method="post">
+            <form action="php/modificarDatos.php" method="post" name = "sandbox" onsubmit="return validateForm()">
+
+                Recuerda respetar las mayúsculas en los nombres, una vez cargados los datos <b>no podrán ser modificados</b>, todos los campos son obligatorios.
+
               <div class="form-group">
-                Ingresa el <b>correo</b> y la <b>información a modificar</b>, verifica los datoa antes de presionar modificar.
                 <div class="form-row">
                   <div class="col-md-6">
                     <div class="dropdown-divider"></div>
                     <label for="correo">Correo Rappi</label>
-                    <input class="form-control" name="email_rappi" id="correo" type="email_rappi" aria-describedby="emailHelp" placeholder="correo de Rappi">
+                    <input class="form-control" name="email_rappi" id="email_rappi" type="email" aria-describedby="emailHelp" placeholder="correo de Rappi">
                   </div>
                   <div class="col-md-6">
                     <div class="dropdown-divider"></div>
                     <label for="campo">Información a modificar</label>
                     <div class="form-group">
                       <select class="form-control" name="campo" id="campo" placeholder="selecciona que vas a modificar">
-                        <option>Turno</option>
-                        <option>Rol</option>
-                        <option>Lider</option>
-                        <option>Celular</option>
-                        <option>Remoto</option>
-                        <option>País</option>
+                      	<option>celular</option>
+                        <option>turno</option>
+                        <option>rol</option>
+                        <option>lider</option>
+                        <option>celular</option>
+                        <option>modalidad</option>
+                        <option>dia_d</option>
                       </select>
                     </div>
                   </div>
                 </div>
-              </div>
-
               <!-------------------------------------------------------------------------------->
               <div class="form-group">
                 <div class="form-row">
                   <div class="col-md-6">
                     <label for="nuevo">Nueva información</label>
-                    <input class="form-control" name="nuevo"id="nuevo" type="text" aria-describedby="nameHelp" placeholder="nueva información">
+                    <input class="form-control" name="nuevo" id="nuevo" type="text" aria-describedby="nameHelp" placeholder="nueva información">
                   </div>
                 </div>
               </div>
