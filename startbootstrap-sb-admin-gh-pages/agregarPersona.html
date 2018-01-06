@@ -36,10 +36,10 @@
       var grupo = document.forms["sandbox"]["grupo"].value;
       var pais = document.forms["sandbox"]["pais"].value;
       var modalidad = document.forms["sandbox"]["modalidad"].value;
-      
-      
-      
-      
+
+
+
+
       if (nombre1 == "") {
           alert("Debes ingresar el nombre de la persona");
           return false;
@@ -82,7 +82,7 @@
       }else if ( lider == "") {
           alert("Debes ingresar el grupo al cual pertenece la persona");
           return false;
-      }else if (grupo== "") {	
+      }else if (grupo== "") {
           alert("Debes ingresar el lider de la persona");
                 return false;
       }else if (pais == "") {
@@ -92,15 +92,20 @@
           alert("Debes ingresar la modalidad de la persona");
           return false;
       }
-      
+
   }
 </script>
 
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" >
+
+
     <a class="navbar-left" href="index.html"><img src="Imagenes/rappi_header.png" alt="Rappi Feed"></a>
+
+
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -117,11 +122,18 @@
               <a href="buscarPersona.html">Buscar Persona</a>
             </li>
             <li>
+              <a href="consultarEquipo.html">Consultar Equipo</a>
+            </li>
+            <li>
               <a href="personasActivas.html">Personas Activas</a>
             </li>
             <li>
-              <a href="personasInactivas.html">Personas Inactivas</a>
+              <a href="consultarHorario.html">Consultar Horario</a>
             </li>
+            <li>
+              <a href="consultarHorario.html">Consultar Auditorias</a>
+            </li>
+
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
@@ -136,8 +148,15 @@
             <li>
               <a href="despedirPersona.html">Despedir Persona</a>
             </li>
+            <li>
+              <a href="modificarDatos.html">Modificar Datos</a>
+            </li>
+            <li>
+              <a href="personasInactivas.html">Personas Inactivas</a>
+            </li>
           </ul>
         </li>
+
       </ul>
 
       <!-- Reductor de la barra deslizante -->
@@ -196,7 +215,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -209,7 +228,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -222,7 +241,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -433,7 +452,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="form-group">
             <div class="form-row">
               <div class="col-md-6">
@@ -470,7 +489,7 @@
             </div>
             </div>
           </div>
-          
+
 
 
 
@@ -530,4 +549,3 @@
 </body>
 
 </html>
-
