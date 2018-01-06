@@ -48,8 +48,8 @@ while($row = $resultado->fetch_assoc()){
     <td> " . $row["turno"]. "</td>
     <td> " . $row["dia_d"]. "</td>
     <td> " . $row["pais"]. "</td>
-  </tr> "
-;
+  </tr> ";
+
 
 }
 echo '

@@ -1,4 +1,6 @@
 <?php
+
+
 // Datos del servidor
 $url = "72.29.85.225";
 $user = "edurappi";
@@ -12,14 +14,19 @@ $sql = "UPDATE opeReallyNew SET $_POST[campo] = '$_POST[nuevo]' WHERE email_rapp
 $sql2 = "INSERT modif_opeReallyNew (email_rappi, dato_modificado) VALUES ('$_POST[email_rappi]','$_POST[campo]')";
 
 
+//header('Location: http://edurappi.info/RappiFeed/rappi/modificarDatos.html');
+
 echo '
  <script>
  function alerta(){
-  alert("Datos modificados exitosamente");
+   window.alert("Datos modificados exitosamente");
+   window.location.href="http://edurappi.info/RappiFeed/rappi/modificarDatos.html";
   }
   </script>';
 //Confirmación de registro
+
 if ($conn->query($sql) === TRUE & $conn->query($sql2) === TRUE) {
+
     echo '
  <script>  alerta();  </script>';
 } else {
@@ -27,6 +34,5 @@ if ($conn->query($sql) === TRUE & $conn->query($sql2) === TRUE) {
 }
 
 $conn->close(); // Cerrar conexión
-header('Location: index.html');
-exit;
+
  ?>

@@ -23,6 +23,7 @@ $resultado = $db->query($prueba);
 while($row = $resultado->fetch_assoc()){
   echo "Name: " . $row["nombre1"]. " " . $row["nombre2"] . "<br>". "Correo: " . $row["correo_rappi"]. "<br>";
 }
+
 echo '
 </body>
 </html>';
