@@ -27,4 +27,6 @@ if ($conn->query($sql) === TRUE & $conn->query($sql2) === TRUE) {
 }
 
 $conn->close(); // Cerrar conexión
+header('Location: index.html');
+exit;
  ?>
