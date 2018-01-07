@@ -32,7 +32,8 @@ VALUES ('$_POST[email_rappi]', '$_POST[cms_user_id]', '$_POST[nombre1]', '$_POST
 echo '
  <script>
  function alerta(){
-  alert("Datos enviados exitosamente");
+  window.alert("Datos enviados exitosamente");
+  window.location.href="http://edurappi.info/RappiFeed/rappi/agregarPersona.html";
   }
   </script>';
 //Confirmación de registro

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta charset="utf-8">-->
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -104,43 +104,75 @@
       <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i>Personas Inactivas</div>
+          <i class="fa fa-table"></i>Personas Activas</div>
         <div class="card-body">
+
+          <form action="php/personasActivas.php" method="post" name = "sandbox">
+              <button name = "enviar" type="submit" class="btn btn-primary">Consultar</button>
+          </form>
+
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Id</th>
-                  <th>Correo</th>
                   <th>Nombres</th>
-                  <th>Primer Apellido</th>
-                  <th>Segundo Apellido</th>
+                  <th>Apellidos</th>
+                  <th>Correo</th>
                   <th>Celular</th>
-                  <th>Cedula</th>
-                  <th>Correo personal</th>
-                  <th>Fecha de Nacimiento</th>
                   <th>Fecha de Ingreso</th>
-                  <th>Fecha de Salida</th>
-                  <th>Salario Base</th>
+                  <th>Rol</th>
+                  <th>Modalidad</th>
+                  <th>Lider</th>
+                  <th>Turno</th>
+                  <th>Dia de Descanso</th>
+                  <th>Pais</th>
                 </tr>
               </thead>
               <tfoot>
                 <tr>
-                  <th>Id</th>
-                  <th>Correo</th>
                   <th>Nombres</th>
-                  <th>Primer Apellido</th>
-                  <th>Segundo Apellido</th>
+                  <th>Apellidos</th>
+                  <th>Correo</th>
                   <th>Celular</th>
-                  <th>Cedula</th>
-                  <th>Correo personal</th>
-                  <th>Fecha de Nacimiento</th>
                   <th>Fecha de Ingreso</th>
-                  <th>Fecha de Salida</th>
-                  <th>Salario Base</th>
+                  <th>Rol</th>
+                  <th>Modalidad</th>
+                  <th>Lider</th>
+                  <th>Turno</th>
+                  <th>Dia de Descanso</th>
+                  <th>Pais</th>
                 </tr>
               </tfoot>
               <tbody>
+                <?php
+                $url = "72.29.85.225";
+                $user = "edurappi";
+                $password = "PS0m1fGAC1";
+                $dbname = "edurappi_juandavid";
+
+                $db = mysqli_connect($url,$user,$password,$dbname) or die('NOPE');
+
+                $prueba = "SELECT email_rappi,nombre1,nombre2, apellido1, apellido2, celular, fecha_ingreso, rol, modalidad, lider, turno, dia_d, pais from opeReallyNew";
+
+                $resultado = $db->query($prueba);
+
+                while($row = $resultado->fetch_assoc()){
+
+                  echo "<tr>
+                    <td>" . $row["nombre1"]. " " . $row["nombre2"] . "</td>
+                    <td>" . $row["apellido1"]. " " . $row["apellido2"] . "</td>
+                    <td> " . $row["email_rappi"]. "</td>
+                    <td> " . $row["celular"]. "</td>
+                    <td> " . $row["fecha_ingreso"]. "</td>
+                    <td> " . $row["rol"]. "</td>
+                    <td> " . $row["modalidad"]. "</td>
+                    <td> " . $row["lider"]. "</td>
+                    <td> " . $row["turno"]. "</td>
+                    <td> " . $row["dia_d"]. "</td>
+                    <td> " . $row["pais"]. "</td>
+                  </tr> ";
+                }
+                ?>
               </tbody>
             </table>
           </div>
@@ -179,19 +211,22 @@
         </div>
       </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Page level plugin JavaScript-->
-    <script src="vendor/datatables/jquery.dataTables.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
-    <!-- Custom scripts for this page-->
-    <script src="js/sb-admin-datatables.min.js"></script>
+
   </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Page level plugin JavaScript-->
+  <script src="vendor/datatables/jquery.dataTables.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+  <!-- Custom scripts for this page-->
+  <script src="js/sb-admin-datatables.min.js"></script>
+
 </body>
 
 </html>
