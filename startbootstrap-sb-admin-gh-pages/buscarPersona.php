@@ -176,11 +176,12 @@
 
                 if(!empty($_correo)){
 
-                  $prueba = "SELECT * from opeReallyNew where email_rappi = $_correo";
+                  $_correo = (String)$_correo;
+                  $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo'";
 
                   $resultado = $db->query($prueba);
 
-                  echo "".$resultado;
+
                   while($row = $resultado->fetch_assoc()){
 
                       echo "<tr>
