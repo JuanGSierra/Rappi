@@ -39,7 +39,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="buscarPersona.html">Buscar Persona</a>
+              <a href="buscarPersona.php">Buscar Persona</a>
             </li>
             <li>
               <a href="consultarEquipo.html">Consultar Equipo</a>
@@ -106,10 +106,6 @@
         <div class="card-header">
           <i class="fa fa-table"></i>Personas Activas</div>
         <div class="card-body">
-
-          <form action="php/personasActivas.php" method="post" name = "sandbox">
-              <button name = "enviar" type="submit" class="btn btn-primary">Consultar</button>
-          </form>
 
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
