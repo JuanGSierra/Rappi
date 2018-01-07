@@ -175,17 +175,17 @@
                 $db = mysqli_connect($url,$user,$password,$dbname) or die('NOPE');
 
                 if(!empty($_correo)){
-                  $prueba = "SELECT email_rappi,nombre1,nombre2, apellido1, apellido2,
-                  celular, fecha_ingreso, rol, modalidad, lider, turno, dia_d, pais
-                  from opeReallyNew where email_rappi = $_correo";
+
+                  $prueba = "SELECT * from opeReallyNew where email_rappi = $_correo";
 
                   $resultado = $db->query($prueba);
 
+                  echo "".$resultado;
                   while($row = $resultado->fetch_assoc()){
 
                       echo "<tr>
-                      <td> DUDE" . $row["nombre1"]. " " . $row["nombre2"] . "</td>
-                      <td>" . $row["apellido1"]. " " . $row["apellido2"] . "</td>
+                      <td> " . $row["nombre1"]. " " . $row["nombre2"] . "</td>
+                      <td> " . $row["apellido1"]. " " . $row["apellido2"] . "</td>
                       <td> " . $row["email_rappi"]. "</td>
                       <td> " . $row["celular"]. "</td>
                       <td> " . $row["fecha_ingreso"]. "</td>
@@ -222,6 +222,8 @@
                         </tr> ";
                       }
                 }
+                $db->close();
+
                 ?>
               </tbody>
             </table>
