@@ -141,6 +141,7 @@
               </tfoot>
               <tbody>
                 <?php
+                // conexión  la base de datos
                 $url = "72.29.85.225";
                 $user = "edurappi";
                 $password = "PS0m1fGAC1";
@@ -152,6 +153,8 @@
 
                 $resultado = $db->query($prueba);
 
+                // Dibuja todos los datos que estan en la tabla, aun no verifica
+                // si tienen fecha de desactivacion
                 while($row = $resultado->fetch_assoc()){
 
                   echo "<tr>

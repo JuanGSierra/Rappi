@@ -164,9 +164,11 @@
             <tbody>
 
               <?php
+              // Guarda los valores que estan en los input de busqueda
                 $_correo = $_POST["porCorreo"];
                 $_celular = $_POST["porCelular"];
 
+                // conexión con la base de datos
                 $url = "72.29.85.225";
                 $user = "edurappi";
                 $password = "PS0m1fGAC1";
@@ -174,9 +176,11 @@
 
                 $db = mysqli_connect($url,$user,$password,$dbname) or die('NOPE');
 
+                // si la variable de correo no esta vacia, busca por correo
                 if(!empty($_correo)){
 
-                  $_correo = (String)$_correo;
+                  $_correo = (String)$_correo; // castea el correo a string, de lo consultarHorario
+                                                // mysql cuenta la @ como sintax error
                   $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo'";
 
                   $resultado = $db->query($prueba);
@@ -199,7 +203,11 @@
                       </tr> ";
                     }
 
-                } else{
+                }
+                // De lo contrario buscara por celular (si ninguna de las dos esta llena
+                // la variable $resultado no tendra datos y por lo tanto llenara de vacio
+                // la tabla)
+                else{
                   $prueba = "SELECT email_rappi,nombre1,nombre2, apellido1, apellido2,
                    celular, fecha_ingreso, rol, modalidad, lider, turno, dia_d, pais
                     from opeReallyNew where celular = $_celular";
@@ -223,7 +231,7 @@
                         </tr> ";
                       }
                 }
-                $db->close();
+                $db->close(); // cierra la conexión a la db
 
                 ?>
               </tbody>

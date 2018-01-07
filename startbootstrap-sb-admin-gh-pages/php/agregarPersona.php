@@ -28,7 +28,8 @@ $sql = "INSERT INTO opeReallyNew (email_rappi, cms_user_id, nombre1, nombre2, ap
 VALUES ('$_POST[email_rappi]', '$_POST[cms_user_id]', '$_POST[nombre1]', '$_POST[nombre2]','$_POST[apellido1]','$_POST[apellido2]', '$_POST[celular]', '$_POST[cedula]', '$_POST[fecha_nacimiento]','$_POST[fecha_ingreso]','$_POST[email_personal]', '$_POST[rol]', '$_POST[modalidad]', '$_POST[lider]', '$_POST[turno]','$_POST[dia_d]',
   '$_POST[dia_d_alt]', '$_POST[grupo]', '$_POST[pais]', '$_POST[nick]')"; // Query, las variables entran directamente
 
-
+// la alerta ahora aparecera en el valor de href de location, sease se redirecciona
+// después de haber hecho el ingreso de los datos
 echo '
  <script>
  function alerta(){
