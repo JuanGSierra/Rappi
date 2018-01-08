@@ -9,21 +9,19 @@
   <meta name="author" content="">
   <title>Rappi Feed</title>
   <!-- Bootstrap core CSS-->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
-  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin.css" rel="stylesheet">
-  <link rel="shortcut icon" type="image/png" href="Imagenes/favicon.png"/>
+  <link href="../css/sb-admin.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="../Imagenes/favicon.png"/>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" >
 
-
-    <a class="navbar-left" href="index.html"><img src="Imagenes/rappi_header.png" alt="Rappi Feed"></a>
-
+    <a class="navbar-left" href="../index.html"><img src="../Imagenes/rappi_header.png" alt="Rappi Feed"></a>
 
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,46 +30,100 @@
       <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents" data-parent="#exampleAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultar" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-search"></i>
             <span class="nav-link-text">Consultar</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseComponents">
+          <ul class="sidenav-second-level collapse" id="collapseConsultar">
             <li>
-              <a href="buscarPersona.php">Buscar Persona</a>
+              <a href="../GrupoConsultar/buscarPersona.php">Buscar Persona</a>
             </li>
             <li>
-              <a href="consultarEquipo.html">Consultar Equipo</a>
+              <a href="../GrupoConsultar/consultarEquipo.html">Consultar Equipo</a>
             </li>
             <li>
-              <a href="personasActivas.php">Personas Activas</a>
+              <a href="../GrupoConsultar/personasActivas.php">Personas Activas</a>
             </li>
             <li>
-              <a href="consultarHorario.html">Consultar Horario</a>
+              <a href="../GrupoConsultar/consultarLideres.html">Consultar Líderes</a>
             </li>
             <li>
-              <a href="consultarHorario.html">Consultar Auditorias</a>
+              <a href="../GrupoConsultar/todosLosEquipos.html">Todos los Equipos</a>
             </li>
-
+            <li>
+              <a href="../GrupoConsultar/consultarHorario.html">Consultar Horario</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultar/misDatos.html">Mis Datos</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultar/misAuditorias.html">Mis Auditorias</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultar/misHorasExtras.html">Mis Horas Extras</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultar/solicitarHorasExtras.html">Solicitar Horas Extras</a>
+            </li>
           </ul>
         </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Auditorias">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAuditorias" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-gavel"></i>
+            <span class="nav-link-text">Auditorias</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseAuditorias">
+            <li>
+              <a href="../GrupoAuditorias/auditar.html">Auditar</a>
+            </li>
+            <li>
+              <a href="../GrupoAuditorias/consultarAuditorias.html">Consultar Auditorias</a>
+            </li>
+          </ul>
+        </li>
+
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultasEspeciales" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-plus-circle"></i>
+            <span class="nav-link-text">Consultas Especiales</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseConsultasEspeciales">
+            <li>
+              <a href="../GrupoConsultasEspeciales/validarHorasExtras.html">Validar Horas Extras</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultasEspeciales/todasLasAuditorias.html">Todas las Auditorias</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultasEspeciales/personasInactivas.html">Personas Inactivas</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultasEspeciales/consolidadoDeStrikes.html">Consolidado de Strikes</a>
+            </li>
+            <li>
+              <a href="../GrupoConsultasEspeciales/misDatosEspecial.html">Mis Datos </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAdministrativo" data-parent="#exampleAccordion">
             <i class="fa fa-fw fa-users"></i>
             <span class="nav-link-text">Administrativo</span>
           </a>
-          <ul class="sidenav-second-level collapse" id="collapseExamplePages">
+          <ul class="sidenav-second-level collapse" id="collapseAdministrativo">
             <li>
-              <a href="agregarPersona.html">Agregar Persona</a>
+              <a href="../GrupoAdministrativo/ingresarDatos.html">Ingresar Datos</a>
             </li>
             <li>
-              <a href="despedirPersona.html">Despedir Persona</a>
+              <a href="../GrupoAdministrativo/modificarDatos.html">Modificar Datos</a>
             </li>
             <li>
-              <a href="modificarDatos.html">Modificar Datos</a>
+              <a href="../GrupoAdministrativo/finalizacionDelContrato.html">Finalización de Contrato</a>
             </li>
             <li>
-              <a href="personasInactivas.html">Personas Inactivas</a>
+              <a href="../GrupoAdministrativo/horasExtrasTotal.html">Horas Extras Total</a>
             </li>
           </ul>
         </li>
@@ -180,7 +232,7 @@
 
                   $_correo = (String)$_correo; // castea el correo a string, de lo consultarHorario
                                                 // mysql cuenta la @ como sintax error
-                  $prueba = "SELECT * from opeReallyNew where email_rappi = $_correo";
+                  $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo'";
 
                   $resultado = $db->query($prueba);
 
@@ -267,21 +319,21 @@
 
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-            <a class="btn btn-primary" href="login.html">Salir</a>
+            <a class="btn btn-primary" href="../login.html">Salir</a>
           </div>
         </div>
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.js"></script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/jquery/jquery.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin.min.js"></script>
+    <script src="../js/sb-admin.min.js"></script>
     <!------------------------------------------------------------->
-    <script src="js/imagen.js"></script>
+    <script src="../js/imagen.js"></script>
     <!------------------------------------------------------------->
 
 

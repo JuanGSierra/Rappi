@@ -20,7 +20,7 @@ echo '
  <script>
  function alerta(){
    window.alert("Datos modificados exitosamente");
-   window.location.href="http://edurappi.info/RappiFeed/rappi/modificarDatos.html";
+   window.location.href="http://edurappi.info/RappiFeed/rappi/GrupoAdministrativo/modificarDatos.html";
   }
   </script>';
 //Confirmación de registro
