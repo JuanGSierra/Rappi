@@ -6,8 +6,8 @@ $url = "72.29.85.225";
 $user = "edurappi";
 $password = "PS0m1fGAC1";
 $dbname = "edurappi_juandavid";
-
-$conn = mysqli_connect($url,$user,$password,$dbname) or die('No se pudo realizar conexión'); // Conexión al servidor y mensaje de error
+// Conexión con SQL
+$conn = mysqli_connect($url,$user,$password,$dbname) or die('No se pudo realizar conexión, contacte al administrador de la página'); // Conexión al servidor y mensaje de error
 
 // Query, las variables entran directamente por el POST
 $sql = "UPDATE opeReallyNew SET $_POST[campo] = '$_POST[nuevo]' WHERE email_rappi = '$_POST[email_rappi]'"; // Query, las variables entran directamente
