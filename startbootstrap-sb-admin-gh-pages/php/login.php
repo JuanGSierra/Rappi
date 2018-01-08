@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Datos del servidor
 $url = "72.29.85.225";
 $user = "edurappi";
