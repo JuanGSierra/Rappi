@@ -12,12 +12,14 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!-- Custom styles for this template-->
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custon styles for this template-->
   <link href="css/sb-admin.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="Imagenes/favicon.png"/>
 </head>
 
-<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+<body class="fixed-nav sticky-footer bg-dark" id="page-top" >
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" >
 
@@ -162,6 +164,7 @@
             </thead>
 
             <tbody>
+
               <?php
               // Guarda los valores que estan en los input de busqueda
                 $_correo = $_POST["porCorreo"];
@@ -180,7 +183,7 @@
 
                   $_correo = (String)$_correo; // castea el correo a string, de lo consultarHorario
                                                 // mysql cuenta la @ como sintax error
-                  $prueba = "SELECT * from opeReallyNew where email_rappi = $_correo";
+                  $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo'";
 
                   $resultado = $db->query($prueba);
 
@@ -206,7 +209,7 @@
                 // De lo contrario buscara por celular (si ninguna de las dos esta llena
                 // la variable $resultado no tendra datos y por lo tanto llenara de vacio
                 // la tabla)
-                else if(!empty($_celular)){
+                else{
                   $prueba = "SELECT email_rappi,nombre1,nombre2, apellido1, apellido2,
                    celular, fecha_ingreso, rol, modalidad, lider, turno, dia_d, pais
                     from opeReallyNew where celular = $_celular";
@@ -230,6 +233,8 @@
                         </tr> ";
                       }
                 }
+                $db->close(); // cierra la conexión a la db
+
                 ?>
               </tbody>
             </table>
@@ -241,20 +246,23 @@
 
     </div>
   </div>
+
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
-  <footer class="sticky-footer">
+    <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-            <small >Copyright ©Rappi <b>Todos los derechos reservados</b></small>
+            <small>Copyright ©Rappi <b>Todos los derechos reservados</b></small>
         </div>
       </div>
-  </footer>
+    </footer>
+
+
     <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fa fa-angle-up"></i>
-  </a>
-    <!-- Logout Modal-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Mensaje que sale antes de hacer logout -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -273,18 +281,19 @@
       </div>
     </div>
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.js"></script>
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
-    <!------------------------------------------------------------->
-    <script src="js/imagen.js"></script>
-    <!------------------------------------------------------------->
-
-
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/sb-admin-charts.min.js"></script>
   </div>
 </body>
 
