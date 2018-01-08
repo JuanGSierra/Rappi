@@ -20,7 +20,7 @@ $result = $conn->query($sql);
 if (!$row = mysqli_fetch_assoc($result)){
   echo "Usuario o contraseña incorrectos";
 }else{
-  echo "Ingreso exitoso";
+  $_SESSION['id']= $row['id'];
 }
 
 
