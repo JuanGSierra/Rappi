@@ -153,31 +153,19 @@
   <div class="content-wrapper">
     <div class="container-fluid">
       <div class="card card-search">
-        <div class = "card-header"><b>Mis datos</b></div>
+        <div class = "card-header"><b>Mis datos (especial)</b></div>
           <div class = "card-body">
-            <form method="post" action="misDatos.php">
+            <form method="post" action="misDatosEspecial.php">
 
               <div class="form-group">
                 <div class = "form-row">
                   <div class="col-md-12">
-                    <label for="porCorreo">Ingresa tu correo</label>
+                    <label for="porCorreo">Correo</label>
                     <div class="input-group">
                         <input class="form-control" name="email_rappi" id="email_rappi" type="email" aria-describedby="emailHelp">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class = "form-row">
-                  <div class="col-md-12">
-                    <label for="porCelular">Ingresa tu cédula</label>
-                    <div class="input-group">
-                      <input class="form-control" name="cedula" id="cedula" type="number" aria-describedby="numberHelp">
-                      <span class="input-group-btn">
-                        <!--<a class="btn btn-primary" href="http://edurappi.info/RappiFeed/rappi/buscarPersona.php">Buscar</a>-->
-                        <button type="submit" class="btn btn-primary" name="btnPorCelular">Buscar</button>
-                      </span>
+                        <span class="input-group-btn">
+                          <!--<a class="btn btn-primary" href="http://edurappi.info/RappiFeed/rappi/buscarPersona.php">Buscar</a>-->
+                          <button type="submit" class="btn btn-primary" name="btnPorCelular">Buscar</button>
                     </div>
                   </div>
                 </div>
@@ -206,7 +194,6 @@
                 <th>Turno</th>
                 <th>Dia de Descanso</th>
                 <th>Pais</th>
-                <th>Cedula</th>
               </tr>
             </thead>
 
@@ -214,7 +201,6 @@
               <?php
               // Guarda los valores que estan en los input de busqueda
                 $_correo = $_POST["email_rappi"];
-                $_cedula = $_POST["cedula"];
 
                 // conexión con la base de datos
                 $url = "72.29.85.225";
@@ -225,11 +211,11 @@
                 $db = mysqli_connect($url,$user,$password,$dbname) or die('NOPE');
 
                 // si la variable de correo no esta vacia, busca por correo
-                if(!empty($_correo) &&!empty($_cedula) ){
+                if(!empty($_correo)){
 
                   $_correo = (String)$_correo; // castea el correo a string, de lo consultarHorario
                                                 // mysql cuenta la @ como sintax error
-                  $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo' AND cedula =$_cedula";
+                  $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo'";
 
                   $resultado = $db->query($prueba);
 
@@ -248,7 +234,6 @@
                       <td> " . $row["turno"]. "</td>
                       <td> " . $row["dia_d"]. "</td>
                       <td> " . $row["pais"]. "</td>
-                      <td> " . $row["cedula"]. "</td>
                       </tr> ";
                     }
 
