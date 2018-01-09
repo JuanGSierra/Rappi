@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta charset="utf-8">-->
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -12,6 +11,8 @@
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
   <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="../Imagenes/favicon.png"/>
@@ -27,108 +28,119 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+          <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultar" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-search"></i>
-            <span class="nav-link-text">Consultar</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseConsultar">
-            <li>
-              <a href="../GrupoConsultar/buscarPersona.php">Buscar Persona</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/consultarEquipo.html">Consultar Equipo</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/personasActivas.php">Personas Activas</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/consultarLideres.html">Consultar Líderes</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/todosLosEquipos.html">Todos los Equipos</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/consultarHorario.html">Consultar Horario</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/misDatos.html">Mis Datos</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/misAuditorias.html">Mis Auditorias</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/misHorasExtras.html">Mis Horas Extras</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/solicitarHorasExtras.html">Solicitar Horas Extras</a>
-            </li>
-          </ul>
-        </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultar" data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-search"></i>
+          <span class="nav-link-text">Consultar</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseConsultar">
+          <li>
+            <a href="../GrupoConsultar/buscarPersona.php">Buscar Persona</a>
+          </li>
+          <!--
+          <li>
+            <a href="GrupoConsultar/consultarEquipo.html">Consultar Equipo</a>
+          </li>
+        -->
+          <li>
+            <a href="../GrupoConsultar/personasActivas.php">Personas Activas</a>
+          </li>
+          <li>
+            <a href="../GrupoConsultar/consultarLideres.php">Consultar Lideres</a>
+          </li>
+          <!--
+          <li>
+            <a href="GrupoConsultar/todosLosEquipos.html">Todos los Equipos</a>
+          </li>
+          -->
+          <li>
+            <a href="../GrupoConsultar/consultarHorario.php">Consultar Horario</a>
+          </li>
+          <li>
+            <a href="../GrupoConsultar/misDatos.php">Mis Datos</a>
+          </li>
+          <!--
+          <li>
+            <a href="GrupoConsultar/misAuditorias.html">Mis Auditorias</a>
+          </li>
+          -->
+          <li>
+            <a href="../GrupoConsultar/misHorasExtras.php">Mis Horas Extras</a>
+          </li>
+          <li>
+            <a href="../GrupoConsultar/solicitarHorasExtras.html">Solicitar Horas Extras</a>
+          </li>
+        </ul>
+      </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Auditorias">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAuditorias" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-gavel"></i>
-            <span class="nav-link-text">Auditorias</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseAuditorias">
-            <li>
-              <a href="../GrupoAuditorias/auditar.html">Auditar</a>
-            </li>
-            <li>
-              <a href="../GrupoAuditorias/consultarAuditorias.html">Consultar Auditorias</a>
-            </li>
-          </ul>
-        </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Auditorias">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAuditorias" data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-gavel"></i>
+          <span class="nav-link-text">Auditorias</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseAuditorias">
+          <li>
+            <a href="../GrupoAuditorias/auditar.html">Auditar</a>
+          </li>
+          <li>
+            <a href="../GrupoAuditorias/consultarAuditorias.html">Consultar Auditorias</a>
+          </li>
+        </ul>
+      </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultasEspeciales" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-plus-circle"></i>
-            <span class="nav-link-text">Consultas Especiales</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseConsultasEspeciales">
-            <li>
-              <a href="../GrupoConsultasEspeciales/validarHorasExtras.html">Validar Horas Extras</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultasEspeciales/todasLasAuditorias.html">Todas las Auditorias</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultasEspeciales/personasInactivas.html">Personas Inactivas</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultasEspeciales/consolidadoDeStrikes.html">Consolidado de Strikes</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultasEspeciales/misDatosEspecial.html">Mis Datos </a>
-            </li>
-          </ul>
-        </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultasEspeciales" data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-plus-circle"></i>
+          <span class="nav-link-text">Consultas Especiales</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseConsultasEspeciales">
+          <li>
+            <a href="../GrupoConsultasEspeciales/validarHorasExtras.html">Validar Horas Extras</a>
+          </li>
+          <!--
+          <li>
+            <a href="GrupoConsultasEspeciales/todasLasAuditorias.html">Todas las Auditorias</a>
+          </li>
+        -->
+          <li>
+            <a href="../GrupoConsultasEspeciales/personasInactivas.php">Personas Inactivas</a>
+          </li>
+          <li>
+            <a href="../GrupoConsultasEspeciales/consolidadoDeStrikes.html">Consolidado de Strikes</a>
+          </li>
+          <!--
+          <li>
+            <a href="../GrupoConsultasEspeciales/misDatosEspecial.php">Mis Datos </a>
+          </li>
+          -->
+        </ul>
+      </li>
 
-        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
-          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAdministrativo" data-parent="#exampleAccordion">
-            <i class="fa fa-fw fa-users"></i>
-            <span class="nav-link-text">Administrativo</span>
-          </a>
-          <ul class="sidenav-second-level collapse" id="collapseAdministrativo">
-            <li>
-              <a href="../GrupoAdministrativo/ingresarDatos.html">Ingresar Datos</a>
-            </li>
-            <li>
-              <a href="../GrupoAdministrativo/modificarDatos.html">Modificar Datos</a>
-            </li>
-            <li>
-              <a href="../GrupoAdministrativo/finalizacionDelContrato.html">Finalización de Contrato</a>
-            </li>
-            <li>
-              <a href="../GrupoAdministrativo/horasExtrasTotal.html">Horas Extras Total</a>
-            </li>
-          </ul>
-        </li>
+      <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAdministrativo" data-parent="#exampleAccordion">
+          <i class="fa fa-fw fa-users"></i>
+          <span class="nav-link-text">Administrativo</span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="collapseAdministrativo">
+          <li>
+            <a href="../GrupoAdministrativo/ingresarDatos.html">Ingresar Datos</a>
+          </li>
+          <li>
+            <a href="../GrupoAdministrativo/modificarDatos.html">Modificar Datos</a>
+          </li>
+          <li>
+            <a href="../GrupoAdministrativo/finalizacionDelContrato.html">Finalizacion de Contrato</a>
+          </li>
+          <li>
+            <a href="../GrupoAdministrativo/horasExtrasTotal.php">Horas Extras Total</a>
+          </li>
+        </ul>
+      </li>
 
-      </ul>
+    </ul>
+
 
       <!-- Reductor de la barra deslizante -->
 
@@ -152,74 +164,49 @@
 
   <div class="content-wrapper">
     <div class="container-fluid">
-      <div class="card card-search">
-        <div class = "card-header"><b>Buscar Empleado</b></div>
-          <div class = "card-body">
-            <form method="post" action="buscarPersona.php">
-
-              <div class="form-group">
-                <div class = "form-row">
-                  <div class="col-md-12">
-                    <label for="porCorreo">Por Correo</label>
-                    <div class="input-group">
-                        <input class="form-control" name="porCorreo" id="porCorreo" type="email" aria-describedby="emailHelp">
-                        <span class="input-group-btn">
-                          <!--<a class="btn btn-primary" href="http://edurappi.info/RappiFeed/rappi/buscarPersona.php">Buscar</a>-->
-                          <button name="btnPorCorreo" type="submit" class="btn btn-primary">Buscar</button>
-                        </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <div class = "form-row">
-                  <div class="col-md-12">
-                    <label for="porCelular">Por Celular</label>
-                    <div class="input-group">
-                      <input class="form-control" name="porCelular" id="porCelular" type="number" aria-describedby="numberHelp">
-                      <span class="input-group-btn">
-                        <!--<a class="btn btn-primary" href="http://edurappi.info/RappiFeed/rappi/buscarPersona.php">Buscar</a>-->
-                        <button type="submit" class="btn btn-primary" name="btnPorCelular">Buscar</button>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-      </div>
-
+      <!-- Example DataTables Card-->
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-user-circle-o"></i>Empleado</div>
+          <i class="fa fa-table"></i>Personas Inactivas</div>
         <div class="card-body">
 
-        <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-            <thead>
-              <tr>
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Correo</th>
-                <th>Celular</th>
-                <th>Fecha de Ingreso</th>
-                <th>Rol</th>
-                <th>Modalidad</th>
-                <th>Lider</th>
-                <th>Turno</th>
-                <th>Dia de Descanso</th>
-                <th>Pais</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <?php
-              // Guarda los valores que estan en los input de busqueda
-                $_correo = $_POST["porCorreo"];
-                $_celular = $_POST["porCelular"];
-
-                // conexión con la base de datos
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Correo</th>
+                  <th>Celular</th>
+                  <th>Fecha de Ingreso</th>
+                  <th>Fecha de Desactivación</th>
+                  <th>Rol</th>
+                  <th>Modalidad</th>
+                  <th>Lider</th>
+                  <th>Turno</th>
+                  <th>Dia de Descanso</th>
+                  <th>Pais</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Nombres</th>
+                  <th>Apellidos</th>
+                  <th>Correo</th>
+                  <th>Celular</th>
+                  <th>Fecha de Ingreso</th>
+                  <th>Fecha de Desactivación</th>
+                  <th>Rol</th>
+                  <th>Modalidad</th>
+                  <th>Lider</th>
+                  <th>Turno</th>
+                  <th>Dia de Descanso</th>
+                  <th>Pais</th>
+                </tr>
+              </tfoot>
+              <tbody>
+                <?php
+                // conexión  la base de datos
                 $url = "72.29.85.225";
                 $user = "edurappi";
                 $password = "PS0m1fGAC1";
@@ -227,60 +214,28 @@
 
                 $db = mysqli_connect($url,$user,$password,$dbname) or die('NOPE');
 
-                // si la variable de correo no esta vacia, busca por correo
-                if(!empty($_correo)){
+                $prueba = "SELECT email_rappi,nombre1,nombre2, apellido1, apellido2, celular, fecha_ingreso, fecha_desactivacion, rol, modalidad, lider, turno, dia_d, pais from opeReallyNew where fecha_desactivacion IS NOT NULL";
 
-                  $_correo = (String)$_correo; // castea el correo a string, de lo consultarHorario
-                                                // mysql cuenta la @ como sintax error
-                  $prueba = "SELECT * from opeReallyNew where email_rappi = '$_correo'";
+                $resultado = $db->query($prueba);
 
-                  $resultado = $db->query($prueba);
+                // Dibuja todos los datos que estan en la tabla, aun no verifica
+                // si tienen fecha de desactivacion
+                while($row = $resultado->fetch_assoc()){
 
-
-                  while($row = $resultado->fetch_assoc()){
-
-                      echo "<tr>
-                      <td> " . $row["nombre1"]. " " . $row["nombre2"] . "</td>
-                      <td> " . $row["apellido1"]. " " . $row["apellido2"] . "</td>
-                      <td> " . $row["email_rappi"]. "</td>
-                      <td> " . $row["celular"]. "</td>
-                      <td> " . $row["fecha_ingreso"]. "</td>
-                      <td> " . $row["rol"]. "</td>
-                      <td> " . $row["modalidad"]. "</td>
-                      <td> " . $row["lider"]. "</td>
-                      <td> " . $row["turno"]. "</td>
-                      <td> " . $row["dia_d"]. "</td>
-                      <td> " . $row["pais"]. "</td>
-                      </tr> ";
-                    }
-
-                }
-                // De lo contrario buscara por celular (si ninguna de las dos esta llena
-                // la variable $resultado no tendra datos y por lo tanto llenara de vacio
-                // la tabla)
-                else if(!empty($_celular)){
-                  $prueba = "SELECT email_rappi,nombre1,nombre2, apellido1, apellido2,
-                   celular, fecha_ingreso, rol, modalidad, lider, turno, dia_d, pais
-                    from opeReallyNew where celular = $_celular";
-
-                    $resultado = $db->query($prueba);
-
-                    while($row = $resultado->fetch_assoc()){
-
-                        echo "<tr>
-                        <td>" . $row["nombre1"]. " " . $row["nombre2"] . "</td>
-                        <td>" . $row["apellido1"]. " " . $row["apellido2"] . "</td>
-                        <td> " . $row["email_rappi"]. "</td>
-                        <td> " . $row["celular"]. "</td>
-                        <td> " . $row["fecha_ingreso"]. "</td>
-                        <td> " . $row["rol"]. "</td>
-                        <td> " . $row["modalidad"]. "</td>
-                        <td> " . $row["lider"]. "</td>
-                        <td> " . $row["turno"]. "</td>
-                        <td> " . $row["dia_d"]. "</td>
-                        <td> " . $row["pais"]. "</td>
-                        </tr> ";
-                      }
+                  echo "<tr>
+                    <td>" . $row["nombre1"]. " " . $row["nombre2"] . "</td>
+                    <td>" . $row["apellido1"]. " " . $row["apellido2"] . "</td>
+                    <td> " . $row["email_rappi"]. "</td>
+                    <td> " . $row["celular"]. "</td>
+                    <td> " . $row["fecha_ingreso"]. "</td>
+                    <td> " . $row["fecha_desactivacion"]. "</td>
+                    <td> " . $row["rol"]. "</td>
+                    <td> " . $row["modalidad"]. "</td>
+                    <td> " . $row["lider"]. "</td>
+                    <td> " . $row["turno"]. "</td>
+                    <td> " . $row["dia_d"]. "</td>
+                    <td> " . $row["pais"]. "</td>
+                  </tr> ";
                 }
                 ?>
               </tbody>
@@ -289,23 +244,20 @@
         </div>
 
       </div>
-
-
     </div>
-  </div>
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
-  <footer class="sticky-footer">
+    <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
-            <small >Copyright ©Rappi <b>Todos los derechos reservados</b></small>
+            <small>Copyright Rappi <b>Todos los derechos reservados</b></small>
         </div>
       </div>
-  </footer>
+    </footer>
     <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fa fa-angle-up"></i>
-  </a>
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
     <!-- Logout Modal-->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -313,7 +265,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Seguro que quieres Salir?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true">脳</span>
             </button>
           </div>
 
@@ -324,20 +276,22 @@
         </div>
       </div>
     </div>
-    <!-- Bootstrap core JavaScript-->
-    <script src="../vendor/jquery/jquery.js"></script>
-    <script src="../vendor/jquery/jquery.min.js"></script>
-    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <!-- Core plugin JavaScript-->
-    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-    <!-- Custom scripts for all pages-->
-    <script src="../js/sb-admin.min.js"></script>
-    <!------------------------------------------------------------->
-    <script src="../js/imagen.js"></script>
-    <!------------------------------------------------------------->
-
 
   </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Page level plugin JavaScript-->
+  <script src="../vendor/datatables/jquery.dataTables.js"></script>
+  <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="../js/sb-admin.min.js"></script>
+  <!-- Custom scripts for this page-->
+  <script src="../js/sb-admin-datatables.min.js"></script>
+
 </body>
 
 </html>
