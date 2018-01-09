@@ -15,32 +15,10 @@
   <!-- Custom styles for this template-->
   <link href="../css/sb-admin.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/png" href="../Imagenes/favicon.png"/>
-  <script>
-  function validateForm() {
-    // Declaración de variables que leen el formulario
-      var dato1 = document.forms["sandbox"]["email_rappi"].value;
-      var dato2 = document.forms["sandbox"]["fecha_HE"].value;
-      var dato3 = document.forms["sandbox"]["hora_ini"].value;
-      var dato4 = document.forms["sandbox"]["hora_fin"].value;
-      if (dato1 == "") {
-          alert("Debes ingresar tu email de Rappi");
-          return false;
-      }else if (dato2 == "") {
-          alert("Debes ingresar el día en el que trabajaste las horas extras");
-          return false;
-      }else if (dato3 == "") {
-          alert("Debes ingresar la hora de inicio de tus horas extras ");
-          return false;
-      }else if (dato4 == "") {
-          alert("Debes ingresar la hora de finalización de tus horas extras");
-          return false;
-      }
-  }
-</script>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
-
+  <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" >
 
     <a class="navbar-left" href="../index.html"><img src="../Imagenes/rappi_header.png" alt="Rappi Feed"></a>
@@ -172,142 +150,120 @@
     </div>
   </nav>
 
-<div class="content-wrapper">
-  <div class="container-fluid">
-      <div class="card card-register mx-auto mt-2">
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="card card-search">
+        <div class = "card-header"><b>Mis horas Extras</b></div>
+          <div class = "card-body">
+            <form method="post" action="misDatos.php">
 
-        <div class="card-header">Solicitar Horas Extras</div>
+              <div class="form-group">
+                <div class = "form-row">
+                  <div class="col-md-12">
+                    <label for="porCorreo">Ingresa tu correo</label>
+                    <div class="input-group">
+                        <input class="form-control" name="email_rappi" id="email_rappi" type="email" aria-describedby="emailHelp">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class = "form-row">
+                  <div class="col-md-12">
+                    <label for="porCelular">Ingresa tu cédula</label>
+                    <div class="input-group">
+                      <input class="form-control" name="cedula" id="cedula" type="number" aria-describedby="numberHelp">
+                      <span class="input-group-btn">
+                        <!--<a class="btn btn-primary" href="http://edurappi.info/RappiFeed/rappi/buscarPersona.php">Buscar</a>-->
+                        <button type="submit" class="btn btn-primary" name="btnPorCelular">Buscar</button>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-user-circle-o"></i>Datos</div>
         <div class="card-body">
 
-          <form  method="post" name = "sandbox" onsubmit="return validateForm()">
-            <div class="form-group">
-              Ingresa los siguientes datos para que tu lider preautorice tus horas extras y luego las asistentes administrativas las ingresen a tu nómina.<br>
-              Recuerda que <b>no debes incluir las horas de tu horario</b>, solo las horas extras.
-              <div class="form-row">
-                <div class="col-md-6">
-                  <div class="dropdown-divider"></div>
-                  <label for="primerNombre">Email Rappi</label>
-                  <input class="form-control" name="email_rappi" id="email_rappi" type="mail" aria-describedby="nameHelp" placeholder="dato1">
-                </div>
-                <div class="col-md-6">
-                  <div class="dropdown-divider"></div>
-                  <label for="segundoNombre">Fecha horas extras</label>
-                  <input class="form-control" name="fecha_HE" id="fecha_HE" type="date" aria-describedby="nameHelp" placeholder="dato2">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="form-row">
-                <div class="col-md-6">
-                  <label for="fechaNacimiento">Hora Inicio</label>
-                    <select class="form-control" name="hora_ini" id="hora_ini" type="text" placeholder="selecciona el rol">
-                      <option></option>
-                      <option>1:00</option>
-                      <option>2:00</option>
-                      <option>3:00</option>
-                      <option>4:00</option>
-                      <option>5:00</option>
-                      <option>6:00</option>
-                      <option>7:00</option>
-                      <option>8:00</option>
-                      <option>9:00</option>
-                      <option>10:00</option>
-                      <option>11:00</option>
-                      <option>12:00</option>
-                      <option>13:00</option>
-                      <option>14:00</option>
-                      <option>15:00</option>
-                      <option>16:00</option>
-                      <option>17:00</option>
-                      <option>18:00</option>
-                      <option>19:00</option>
-                      <option>20:00</option>
-                      <option>21:00</option>
-                      <option>22:00</option>
-                      <option>23:00</option>
-                      <option>24:00</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                  <label for="rol">Hora Fin</label>
-                    <select class="form-control" name="hora_fin" id="hora_fin" type="text" placeholder="selecciona el rol">
-                      <option></option>
-                      <option>1:00</option>
-                      <option>2:00</option>
-                      <option>3:00</option>
-                      <option>4:00</option>
-                      <option>5:00</option>
-                      <option>6:00</option>
-                      <option>7:00</option>
-                      <option>8:00</option>
-                      <option>9:00</option>
-                      <option>10:00</option>
-                      <option>11:00</option>
-                      <option>12:00</option>
-                      <option>13:00</option>
-                      <option>14:00</option>
-                      <option>15:00</option>
-                      <option>16:00</option>
-                      <option>17:00</option>
-                      <option>18:00</option>
-                      <option>19:00</option>
-                      <option>20:00</option>
-                      <option>21:00</option>
-                      <option>22:00</option>
-                      <option>23:00</option>
-                      <option>24:00</option>
-                    </select>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <button name = "enviar" type="submit" class="btn btn-primary">Enviar</button>
-            <!---<a class="btn btn-primary btn-block" href="login.html">Inscribir</a>------>
-          </form>
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Email Rappi</th>
+                <th>Día horas extras</th>
+                <th>Hora Inicio</th>
+                <th>Hora Fin</th>
+                <th>Horas extras ordinarias</th>
+                <th>Horas extras nocturnas</th>
+                <th>Horas extras ordinarias festivas</th>
+                <th>Horas extras nocturnas festivas</th>
+                <th>Aprobada por lider</th>
+                <th>Aprobada por asistente administrativa</th>
+              </tr>
+            </thead>
 
+            <tbody>              
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-
-
-
-  </div>
-  <footer class="sticky-footer">
-    <div class="container">
-      <div class="text-center">
-          <small >Copyright ©Rappi <b>Todos los derechos reservados</b></small>
       </div>
-    </div>
-  </footer>
 
+
+    </div>
+  </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+  <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+            <small >Copyright ©Rappi <b>Todos los derechos reservados</b></small>
+        </div>
+      </div>
+  </footer>
+    <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fa fa-angle-up"></i>
   </a>
-  <!-- Logout Modal-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Seguro que quieres Salir?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Seguro que quieres Salir?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
 
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="../login.html">Salir</a>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="../login.html">Salir</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Bootstrap core JavaScript-->
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin.min.js"></script>
+    <!------------------------------------------------------------->
+    <script src="../js/imagen.js"></script>
+    <!------------------------------------------------------------->
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- Core plugin JavaScript-->
-  <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="../js/sb-admin-datatables.min.js"></script>
-  <script src="../js/sb-admin.min.js"></script>
+
+  </div>
 </body>
 
 </html>
