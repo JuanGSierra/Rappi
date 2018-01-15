@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Rappi Feed</title>
+  <!-- Bootstrap core CSS-->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <!-- Custon styles for this template-->
+  <link href="css/sb-admin.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="Imagenes/favicon.png"/>
+  <script>
+  function validateForm() {
+    // Declaración de variables que leen el formulario
+      var dato1 = document.forms["sandbox"]["email_rappi"].value;
+      var dato2 = document.forms["sandbox"]["tipo"].value;
+      if (dato1 == "") {
+          alert("Debes ingresar tu correo");
+          return false;
+      }else if (dato2 == "") {
+          alert("¿Te activaste o te desactivaste?");
+          return false;
+      }
+  }
+</script>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top" >
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav" >
+
+    <a class="navbar-left" href="index.html"><img src="Imagenes/rappi_header.png" alt="Rappi Feed"></a>
+
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Consultar">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultar" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-search"></i>
+            <span class="nav-link-text">Consultar</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseConsultar">
+            <li>
+              <a href="GrupoConsultar/buscarPersona.php">Buscar Persona</a>
+            </li>
+            <!--
+            <li>
+              <a href="GrupoConsultar/consultarEquipo.html">Consultar Equipo</a>
+            </li>
+          -->
+            <li>
+              <a href="GrupoConsultar/personasActivas.php">Personas Activas</a>
+            </li>
+            <li>
+              <a href="GrupoConsultar/consultarLideres.php">Consultar Líderes</a>
+            </li>
+            <!--
+            <li>
+              <a href="GrupoConsultar/todosLosEquipos.html">Todos los Equipos</a>
+            </li>
+
+            <li>
+              <a href="GrupoConsultar/consultarHorario.php">Consultar Horario</a>
+            </li>
+            -->
+            <li>
+              <a href="GrupoConsultar/misDatos.php">Mis Datos</a>
+            </li>
+            <!--
+            <li>
+              <a href="GrupoConsultar/misAuditorias.html">Mis Auditorias</a>
+            </li>
+
+            <li>
+              <a href="GrupoConsultar/misHorasExtras.php">Mis Horas Extras</a>
+            </li>
+            <li>
+              <a href="GrupoConsultar/solicitarHorasExtras.html">Solicitar Horas Extras</a>
+            </li>
+            -->
+          </ul>
+        </li>
+        <!--
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Auditorias">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAuditorias" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-gavel"></i>
+            <span class="nav-link-text">Auditorias</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseAuditorias">
+            <li>
+              <a href="GrupoAuditorias/auditar.html">Auditar</a>
+            </li>
+            <li>
+              <a href="GrupoAuditorias/consultarAuditorias.html">Consultar Auditorias</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseConsultasEspeciales" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-plus-circle"></i>
+            <span class="nav-link-text">Consultas Especiales</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseConsultasEspeciales">
+            <li>
+              <a href="GrupoConsultasEspeciales/validarHorasExtras.html">Validar Horas Extras</a>
+            </li>
+            <li>
+              <a href="GrupoConsultasEspeciales/todasLasAuditorias.html">Todas las Auditorias</a>
+            </li>
+            <li>
+              <a href="GrupoConsultasEspeciales/personasInactivas.php">Personas Inactivas</a>
+            </li>
+            <li>
+              <a href="GrupoConsultasEspeciales/consolidadoDeStrikes.html">Consolidado de Strikes</a>
+            </li>
+            <li>
+              <a href="GrupoConsultasEspeciales/misDatosEspecial.php">Mis Datos </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Administrativo">
+          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAdministrativo" data-parent="#exampleAccordion">
+            <i class="fa fa-fw fa-users"></i>
+            <span class="nav-link-text">Administrativo</span>
+          </a>
+          <ul class="sidenav-second-level collapse" id="collapseAdministrativo">
+            <li>
+              <a href="GrupoAdministrativo/ingresarDatos.html">Ingresar Datos</a>
+            </li>
+            <li>
+              <a href="GrupoAdministrativo/modificarDatos.html">Modificar Datos</a>
+            </li>
+            <li>
+              <a href="GrupoAdministrativo/finalizacionDelContrato.html">Finalización de Contrato</a>
+            </li>
+            <li>
+              <a href="GrupoAdministrativo/horasExtrasTotal.php">Horas Extras Total</a>
+            </li>
+          </ul>
+        </li>
+      -->
+
+      </ul>
+
+      <!-- Reductor de la barra deslizante -->
+
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+            <i class="fa fa-fw fa-sign-out"></i>Salir</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <div class="card card-register mx-auto mt-2">
+        <div class="card-header"><i class="fa fa-clock-o"></i><b> Registro Activación Lupe</b></div>
+        <div class="card-body">
+          <form action="asistenciaProv.php" method="post" name = "sandbox" onsubmit="return validateForm()">
+            <div class="form-group">
+              Ingresa tu correo y si te activas (<b>true</b>) o si te desactivas (<b>false</b>).<br>
+              Solo es necesario utilizar este servicio al <b>activarse por primera vez</b> y <b>desactivarse por última vez.</b><br>
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="dropdown-divider"></div>
+                  <label for="primerNombre">Correo</label>
+                  <input class="form-control" name="email_rappi" id="email_rappi" type="email" aria-describedby="nameHelp" placeholder="email Rappi">
+
+                </div>
+                <div class="col-md-6">
+                  <div class="dropdown-divider"></div>
+                  <label for="rol">Activacion/Desactivacion</label>
+                  <div class="form-group">
+                    <select class="form-control" name="tipo" id="tipo" type="text" placeholder="selecciona el rol">
+                      <option></option>
+                      <option>true</option>
+                      <option>false</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <center><button name = "enviar" type="submit" class="btn btn-primary">Enviar</button>
+              </form>
+              <br><center>Una vez enviados los datos no podrán ser modificados.<br>
+            </div>
+          <!-------------------------------------------------------------------------------->
+          <!-------------------------------------------------------------------------------->
+          <?php
+          // Datos del servidor
+          $url = "72.29.85.225";
+          $user = "edurappi";
+          $password = "PS0m1fGAC1";
+          $dbname = "edurappi_juandavid";
+
+          $conn = mysqli_connect($url,$user,$password,$dbname) or die('No se pudo realizar conexión'); // Conexión al servidor y mensaje de error
+
+          //$dato1 = $dato2 = $dato3 = $dato4 = ""; // declaración de variables
+          /*
+          // A las variables se le asignan los datos del formularios/*
+          $dato1 = $post['dato1'];
+          $dato1 = $post['dato2'];
+          $dato1 = $post['dato3'];
+          $dato1 = $post['dato4'];
+          */
+          /* // Test de datos
+
+          echo $_POST['dato1'];
+          echo $_POST['dato2'];
+          echo $_POST['dato3'];
+          echo $_POST['dato4'];
+          */
+
+          // Query, las variables entran directamente por el POST
+          $sql = "INSERT INTO asistenciaProv (email_rappi, tipo, fecha_hora)VALUES ('$_POST[email_rappi]', '$_POST[tipo]', NOW())"; // Query, las variables entran directamente
+
+          // la alerta ahora aparecera en el valor de href de location, sease se redirecciona
+          // después de haber hecho el ingreso de los datos
+          echo '
+           <script>
+           function alerta(){
+            window.alert("Datos enviados exitosamente");
+            window.location.href="http://edurappi.info/RappiFeed/rappi/asistenciaProv.html";
+            }
+            </script>';
+          //Confirmación de registro
+          if ($conn->query($sql) === TRUE) {
+              echo '
+           <script>  alerta();  </script>';
+          } else {
+              echo "Error: " . $sql . "<br>" . $conn->error;
+          }
+
+          $conn->close(); // Cerrar conexión
+           ?>
+        </div>
+    </div>
+  </div>
+  </div>
+
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+            <small>Copyright ©Rappi <b>Todos los derechos reservados</b></small>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Mensaje que sale antes de hacer logout -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Seguro que quieres Salir?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+            <a class="btn btn-primary" href="login.html">Salir</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/sb-admin-datatables.min.js"></script>
+    <script src="js/sb-admin-charts.min.js"></script>
+  </div>
+</body>
+
+</html>
