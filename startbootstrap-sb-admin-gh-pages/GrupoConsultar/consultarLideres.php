@@ -39,35 +39,44 @@
             <li>
               <a href="../GrupoConsultar/buscarPersona.php">Buscar Persona</a>
             </li>
+            <!--
             <li>
-              <a href="../GrupoConsultar/consultarEquipo.html">Consultar Equipo</a>
+              <a href="GrupoConsultar/consultarEquipo.html">Consultar Equipo</a>
             </li>
+          -->
             <li>
               <a href="../GrupoConsultar/personasActivas.php">Personas Activas</a>
             </li>
             <li>
-              <a href="../GrupoConsultar/consultarLideres.html">Consultar Líderes</a>
+              <a href="../GrupoConsultar/consultarLideres.php">Consultar Líderes</a>
+            </li>
+            <!--
+            <li>
+              <a href="GrupoConsultar/todosLosEquipos.html">Todos los Equipos</a>
+            </li>
+
+            <li>
+              <a href="GrupoConsultar/consultarHorario.php">Consultar Horario</a>
+            </li>
+            -->
+            <li>
+              <a href="../GrupoConsultar/misDatos.php">Mis Datos</a>
+            </li>
+            <!--
+            <li>
+              <a href="GrupoConsultar/misAuditorias.html">Mis Auditorias</a>
+            </li>
+
+            <li>
+              <a href="GrupoConsultar/misHorasExtras.php">Mis Horas Extras</a>
             </li>
             <li>
-              <a href="../GrupoConsultar/todosLosEquipos.html">Todos los Equipos</a>
+              <a href="GrupoConsultar/solicitarHorasExtras.html">Solicitar Horas Extras</a>
             </li>
-            <li>
-              <a href="../GrupoConsultar/consultarHorario.html">Consultar Horario</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/misDatos.html">Mis Datos</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/misAuditorias.html">Mis Auditorias</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/misHorasExtras.html">Mis Horas Extras</a>
-            </li>
-            <li>
-              <a href="../GrupoConsultar/solicitarHorasExtras.html">Solicitar Horas Extras</a>
-            </li>
+            -->
           </ul>
         </li>
+        <!--
 
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Auditorias">
           <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseAuditorias" data-parent="#exampleAccordion">
@@ -76,10 +85,10 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseAuditorias">
             <li>
-              <a href="../GrupoAuditorias/auditar.html">Auditar</a>
+              <a href="GrupoAuditorias/auditar.html">Auditar</a>
             </li>
             <li>
-              <a href="../GrupoAuditorias/consultarAuditorias.html">Consultar Auditorias</a>
+              <a href="GrupoAuditorias/consultarAuditorias.html">Consultar Auditorias</a>
             </li>
           </ul>
         </li>
@@ -91,19 +100,19 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseConsultasEspeciales">
             <li>
-              <a href="../GrupoConsultasEspeciales/validarHorasExtras.html">Validar Horas Extras</a>
+              <a href="GrupoConsultasEspeciales/validarHorasExtras.html">Validar Horas Extras</a>
             </li>
             <li>
-              <a href="../GrupoConsultasEspeciales/todasLasAuditorias.html">Todas las Auditorias</a>
+              <a href="GrupoConsultasEspeciales/todasLasAuditorias.html">Todas las Auditorias</a>
             </li>
             <li>
-              <a href="../GrupoConsultasEspeciales/personasInactivas.php">Personas Inactivas</a>
+              <a href="GrupoConsultasEspeciales/personasInactivas.php">Personas Inactivas</a>
             </li>
             <li>
-              <a href="../GrupoConsultasEspeciales/consolidadoDeStrikes.html">Consolidado de Strikes</a>
+              <a href="GrupoConsultasEspeciales/consolidadoDeStrikes.html">Consolidado de Strikes</a>
             </li>
             <li>
-              <a href="../GrupoConsultasEspeciales/misDatosEspecial.html">Mis Datos </a>
+              <a href="GrupoConsultasEspeciales/misDatosEspecial.php">Mis Datos </a>
             </li>
           </ul>
         </li>
@@ -115,21 +124,22 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseAdministrativo">
             <li>
-              <a href="../GrupoAdministrativo/ingresarDatos.html">Ingresar Datos</a>
+              <a href="GrupoAdministrativo/ingresarDatos.html">Ingresar Datos</a>
             </li>
             <li>
-              <a href="../GrupoAdministrativo/modificarDatos.html">Modificar Datos</a>
+              <a href="GrupoAdministrativo/modificarDatos.html">Modificar Datos</a>
             </li>
             <li>
-              <a href="../GrupoAdministrativo/finalizacionDelContrato.html">Finalización de Contrato</a>
+              <a href="GrupoAdministrativo/finalizacionDelContrato.html">Finalización de Contrato</a>
             </li>
             <li>
-              <a href="../GrupoAdministrativo/horasExtrasTotal.html">Horas Extras Total</a>
+              <a href="GrupoAdministrativo/horasExtrasTotal.php">Horas Extras Total</a>
             </li>
           </ul>
         </li>
+      -->
 
-      </ul>
+    </ul>
 
       <!-- Reductor de la barra deslizante -->
 
